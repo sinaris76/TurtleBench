@@ -1,0 +1,15 @@
+from math import sqrt, atan, pi
+
+def draw_polygon(sides, length):
+  outer_turn = 360 / sides 
+  for _ in range(sides):
+    t.forward(length)
+    t.right(outer_turn)
+
+draw_polygon(4, 200)
+t.right(atan(0.5) * 180 / pi)
+t.forward(100* sqrt(5))
+t.setheading(-135)
+t.forward(100 * sqrt(2))
+t.right(45 + atan(2) * 180 / pi)
+t.forward(100* sqrt(5))

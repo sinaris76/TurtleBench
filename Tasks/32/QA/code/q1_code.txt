@@ -1,0 +1,3 @@
+t.circle(100)
+t.right(180)
+t.circle(100)

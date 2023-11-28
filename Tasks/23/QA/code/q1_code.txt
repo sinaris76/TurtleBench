@@ -1,0 +1,9 @@
+x = 30
+for _ in range(4):
+  for i in range(7):
+    t.forward(x)
+    if i % 2 == 0:
+      t.right(90)
+    else:
+      t.right(-90)
+  t.right(-180)

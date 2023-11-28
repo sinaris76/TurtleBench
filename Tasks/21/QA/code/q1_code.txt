@@ -1,0 +1,13 @@
+def branch(side, level):
+  if level == 0:
+    return
+  t.forward(side)
+  t.left(45)
+  branch(side / 2, level - 1)
+  t.right(90)
+  branch(side / 2, level - 1)
+  t.left(45)
+  t.forward(- side)
+
+t.left(90)
+branch(100, 5)

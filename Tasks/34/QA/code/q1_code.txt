@@ -1,0 +1,8 @@
+side = 80
+for _ in range(4):
+  t.forward(side)
+  t.left(90)
+  t.forward(side)
+  t.right(90)
+  t.forward(side)
+  t.right(90)

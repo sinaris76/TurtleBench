@@ -1,0 +1,36 @@
+{"id": 1, "category": "Single Shape", "level": "Easy", "mathLevel": "Elementary", "hasLangDesc": true, "languageDescription":"A simple circle"}
+{"id": 2, "category": "Single Shape", "level": "Easy", "mathLevel": "G-2", "hasLangDesc": true, "languageDescription":"An equilateral triagnle"}
+{"id": 3, "category": "Single Shape", "level": "Easy", "mathLevel": "G-2", "hasLangDesc": true, "languageDescription":"A square"}
+{"id": 4, "category": "Single Shape", "level": "Easy", "mathLevel": "G-3", "hasLangDesc": true, "languageDescription":"A regular pentagon"}
+{"id": 5, "category": "Patterned Composition", "level": "Medium", "mathLevel": "G-6", "hasLangDesc": false}
+{"id": 6, "category": "Outer Composition", "level": "Easy", "mathLevel": "G-3", "hasLangDesc": true, "languageDescription":"Two adjacent equilateral traingles sharing a common base, forming a symmetrical figure along a vertical axis"}
+{"id": 7, "category": "Outer Composition", "level": "Easy", "mathLevel": "G-4", "hasLangDesc": true, "languageDescription":"A square and an equilateral triangle sharing the right side of the square symmetrical horizontally"}
+{"id": 8, "category": "Outer Composition", "level": "Medium", "mathLevel": "G-6", "hasLangDesc": false}
+{"id": 9, "category": "Outer Composition", "level": "Easy", "mathLevel": "", "hasLangDesc": false}
+{"id": 10, "category": "Inner Composition", "level": "Easy", "mathLevel": "G-6", "hasLangDesc": true, "languageDescription":"A circle inscribed in a square "}
+{"id": 11, "category": "Inner Composition", "level": "Medium", "mathLevel": "", "hasLangDesc": false}
+{"id": 12, "category": "Inner Composition", "level": "Hard", "mathLevel": "Algebra, Trigonometry", "hasLangDesc": false}
+{"id": 13, "category": "Inner Composition", "level": "Medium", "mathLevel": "G-7", "hasLangDesc": true, "languageDescription":"a circle with several straight lines intersecting at the center, dividing the circle into eight equal sections. The lines extend from the center to the circumference of the circle, creating eight pie-like segments."}
+{"id": 14, "category": "Outer Composition", "level": "Hard", "mathLevel": "G-7", "hasLangDesc": false}
+{"id": 15, "category": "Patterned Composition", "level": "Hard", "mathLevel": "G-5", "hasLangDesc": false}
+{"id": 16, "category": "Patterned Composition", "level": "Hard", "mathLevel": "G-7", "hasLangDesc": false}
+{"id": 17, "category": "Inner Composition", "level": "Easy", "mathLevel": "G-5", "hasLangDesc": true, "languageDescription":"a simple line drawing of a face on a circular background. The face consists of two circles of the same size representing the eyes, placed above the centerline of the larger circle. Below and between the eyes is an equilateral triangle pointing downwards, representing the nose. There are no other facial features like a mouth, ears, or eyebrows depicted. The lines are consistent in thickness, and the overall design is minimalist and symmetrical."}
+{"id": 18, "category": "Patterned Composition", "level": "Easy", "mathLevel": "G-6", "hasLangDesc": false}
+{"id": 19, "category": "Patterned Composition", "level": "Medium", "mathLevel": "G-6", "hasLangDesc": false}
+{"id": 20, "category": "Single Shape", "level": "Hard", "mathLevel": "G-6", "hasLangDesc": false}
+{"id": 21, "category": "Recursion", "level": "Super Hard", "mathLevel": "G-12", "hasLangDesc": false}
+{"id": 22, "category": "Single Shape", "level": "Easy", "mathLevel": "G-5", "hasLangDesc": true, "languageDescription":"a series of three and a half steps that look like a staircase viewed from the side. Starting from the top left, there is a short horizontal line that moves to the right, followed by a vertical line going downwards, forming the first step. This is followed by two more full steps, each consisting of a horizontal line followed by a vertical line. After the third step, there is a final horizontal line that represents the half step, without a subsequent vertical line descending from it. The lines are consistent in thickness and the steps are evenly spaced, creating a simple, clean geometric pattern."}
+{"id": 23, "category": "Single Shape", "level": "Medium", "mathLevel": "G-5", "hasLangDesc": false}
+{"id": 24, "category": "Outer Composition", "level": "Easy", "mathLevel": "G-3", "hasLangDesc": true, "languageDescription":"Two adjacent equilateral traingles sharing a horizontal common base, where the left triangle is larger than the right one"}
+{"id": 25, "category": "Outer Composition", "level": "Easy", "mathLevel": "G-3", "hasLangDesc": true, "languageDescription":"Three adjacent equilateral traingles sharing a common base, forming a symmetrical figure along a vertical axis"}
+{"id": 26, "category": "Outer Composition", "level": "Easy", "mathLevel": "G-3", "hasLangDesc": true, "languageDescription":"Three adjacent squares sharing a common base, side by side, enclosed within a larger rectangle, resembling a segmented bar"}
+{"id": 27, "category": "Inner Composition", "level": "Easy", "mathLevel": "G-8", "hasLangDesc": true, "languageDescription":"A square inscribed in a circle"}
+{"id": 28, "category": "Inner Composition", "level": "Medium", "mathLevel": "G-8", "hasLangDesc": true, "languageDescription":"a square with its two diagonals"}
+{"id": 29, "category": "Inner Composition", "level": "Medium", "mathLevel": "", "hasLangDesc": true, "languageDescription":"a square with one of its diagonals from top left to bottom right"}
+{"id": 30, "category": "Inner Composition", "level": "Medium", "mathLevel": "", "hasLangDesc": true, "languageDescription":"a square with one of its diagonals from top right to bottom left"}
+{"id": 31, "category": "Outer Composition", "level": "Easy", "mathLevel": "", "hasLangDesc": true, "languageDescription":"two squares connected at one corner. The square on the top left is aligned with the bottom right square such that one of its sides continues as one side of the other square"}
+{"id": 32, "category": "Outer Composition", "level": "Easy", "mathLevel": "G-4", "hasLangDesc": true, "languageDescription":"Two circles on top of each other"}
+{"id": 33, "category": "Patterned Composition", "level": "Hard", "mathLevel": "G-8", "hasLangDesc": false}
+{"id": 34, "category": "Patterned Composition", "level": "Medium", "mathLevel": "G-7", "hasLangDesc": false}
+{"id": 35, "category": "Outer Composition", "level": "Medium", "mathLevel": "G-6", "hasLangDesc": true, "languageDescription":"a combination of a semicircle on top and an equilateral triangle beneath it, sharing the same base, resembling an ice cream cone"}
+{"id": 35, "category": "Outer Composition", "level": "Easy", "mathLevel": "G-4", "hasLangDesc": true, "languageDescription":"two distinct circles placed adjacently, touching at one ponint. The larger circle is to the left, and the smaller circle is to the right."}
