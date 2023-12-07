@@ -1,0 +1,39 @@
+```python
+import turtle
+
+# Set up the screen
+wn = turtle.Screen()
+wn.bgcolor("white")
+
+# Create a turtle
+t = turtle.Turtle()
+t.speed(0)  # Set the speed to the fastest
+t.hideturtle()  # Hide the turtle
+
+# Draw the half-circle on top
+t.up()
+t.goto(0, -100)  # Assume radius of the semi-circle is 100
+t.down()
+t.seth(90)  # Point turtle upwards
+t.circle(100, 180)  # Draw half-circle with a radius of 100
+
+# Draw the horizontal line
+t.up()
+t.goto(-100, 0)
+t.down()
+t.forward(200)
+
+# Draw the triangle
+t.up()
+t.goto(-100, 0)
+t.down()
+t.right(90)
+t.forward(200)
+t.left(120)
+t.forward(200)
+t.left(120)
+t.forward(200)
+
+# Finish drawing
+turtle.done()
+```

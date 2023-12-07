@@ -1,0 +1,27 @@
+```python
+import turtle
+
+# set up the screen 
+t = turtle.Turtle()
+screen = turtle.Screen()
+screen.bgcolor("white")
+t.speed("fastest")
+t.hideturtle()
+
+# drawing the square
+for _ in range(4):
+    t.forward(100)
+    t.left(90)
+
+# drawing the triangles
+for _ in range(4):
+    t.forward(100)
+    t.left(135)
+    t.forward(70.71)  # Side length of square multiplied by sqrt(2)/2
+    t.left(90)
+    t.forward(70.71)
+    t.left(135)
+
+# finishing the drawing
+turtle.done()
+```

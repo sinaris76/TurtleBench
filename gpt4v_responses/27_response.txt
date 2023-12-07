@@ -1,0 +1,28 @@
+```python
+import turtle
+
+screen = turtle.Screen()
+screen.tracer(0)
+
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
+
+# Circle
+t.up()
+t.goto(0, -100)
+t.down()
+t.circle(100)
+
+# Square
+t.up()
+t.goto(-70, 70)
+t.down()
+t.setheading(270)
+for _ in range(4):
+    t.forward(140)
+    t.left(90)
+
+screen.update()
+screen.mainloop()
+```

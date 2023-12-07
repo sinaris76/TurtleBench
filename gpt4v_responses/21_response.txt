@@ -1,0 +1,34 @@
+```python
+import turtle
+
+def draw_branch(turtle, branch_length, angle, level):
+    if level <= 0:
+        return
+    else:
+        turtle.forward(branch_length)
+        turtle.left(angle)
+        draw_branch(turtle, branch_length * 0.6, angle, level - 1)
+        turtle.right(angle * 2)
+        draw_branch(turtle, branch_length * 0.6, angle, level - 1)
+        turtle.left(angle)
+        turtle.backward(branch_length)
+
+def tree():
+    screen = turtle.Screen()
+    screen.setup(width=800, height=600)
+
+    t = turtle.Turtle()
+    t.speed('fastest')
+    t.hideturtle()
+    
+    t.up()
+    t.goto(0, -200)
+    t.down()
+    t.left(90)
+
+    draw_branch(t, 100, 20, 4)
+
+    screen.mainloop()
+
+tree()
+```

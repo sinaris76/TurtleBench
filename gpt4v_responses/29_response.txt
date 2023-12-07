@@ -1,0 +1,19 @@
+```python
+import turtle
+
+screen = turtle.Screen()
+t = turtle.Turtle()
+t.speed("fastest")
+t.hideturtle()
+
+# Draw square
+for _ in range(4):
+    t.forward(100)
+    t.left(90)
+
+# Draw diagonal line
+t.goto(0,0)
+t.goto(100,100)
+
+screen.mainloop()
+```

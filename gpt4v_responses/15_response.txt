@@ -1,0 +1,39 @@
+```python
+import turtle
+
+# Create a turtle screen and set up the turtle
+screen = turtle.Screen()
+t = turtle.Turtle()
+t.speed("fastest")
+t.hideturtle()
+
+# Size of the square
+size = 100
+
+# Draw squares and diagonal lines inside
+for _ in range(4):
+    t.forward(size)
+    t.left(90)
+
+for _ in range(4):
+    t.forward(size)
+    t.backward(size)
+    t.left(90)
+
+# Draw the bigger diamond shape
+t.goto(0, size)
+t.goto(-size, 0)
+t.goto(0, -size)
+t.goto(size, 0)
+t.goto(0, size)
+
+# Draw the crossed lines
+t.goto(-size, 0)
+t.goto(size, 0)
+t.goto(0, -size)
+t.goto(0, size)
+
+# Hide the turtle and finish
+t.hideturtle()
+screen.mainloop()
+```

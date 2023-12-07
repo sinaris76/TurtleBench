@@ -1,0 +1,45 @@
+```python
+import turtle
+
+def draw_triangle(vertices, color, my_turtle):
+    my_turtle.fillcolor(color)
+    my_turtle.up()
+    my_turtle.goto(vertices[0][0],vertices[0][1])
+    my_turtle.down()
+    my_turtle.begin_fill()
+    my_turtle.goto(vertices[1][0],vertices[1][1])
+    my_turtle.goto(vertices[2][0],vertices[2][1])
+    my_turtle.goto(vertices[0][0],vertices[0][1])
+    my_turtle.end_fill()
+
+def midpoint(point1, point2):
+    return [(point1[0] + point2[0]) / 2, (point1[1] + point2[1]) / 2]
+
+def sierpinski(vertices, level, my_turtle):
+    colormaps = ['black']
+    draw_triangle(vertices, colormaps[level], my_turtle)
+    if level > 0:
+        sierpinski([vertices[0],
+                        midpoint(vertices[0], vertices[1]),
+                        midpoint(vertices[0], vertices[2])],
+                   level - 1, my_turtle)
+        sierpinski([vertices[1],
+                        midpoint(vertices[0], vertices[1]),
+                        midpoint(vertices[1], vertices[2])],
+                   level - 1, my_turtle)
+        sierpinski([vertices[2],
+                        midpoint(vertices[2], vertices[1]),
+                        midpoint(vertices[0], vertices[2])],
+                   level - 1, my_turtle)
+
+def main():
+    my_turtle = turtle.Turtle()
+    my_turtle.speed('fastest')
+    turtle.ht()
+    my_window = turtle.Screen()
+    my_points = [[-200, -100], [0, 200], [200, -100]] # size of triangle
+    sierpinski(my_points, 3, my_turtle) # the 3 here denotes the depth of recursion
+    my_window.exitonclick()
+
+main()
+```

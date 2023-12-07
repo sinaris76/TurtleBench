@@ -1,0 +1,21 @@
+```python
+import turtle
+
+def draw_triangle(t, length):
+    for _ in range(3):
+        t.forward(length)
+        t.left(120)
+
+def draw_double_triangle(t, base_length):
+    draw_triangle(t, base_length)
+    t.forward(base_length)
+    draw_triangle(t, base_length / 2)
+
+t = turtle.Turtle()
+t.speed('fastest')
+t.hideturtle()
+
+draw_double_triangle(t, 200)
+
+turtle.done()
+```

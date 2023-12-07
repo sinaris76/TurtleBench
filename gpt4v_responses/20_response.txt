@@ -1,0 +1,21 @@
+```python
+import turtle
+
+# Set up the screen
+wn = turtle.Screen()
+wn.bgcolor("white")
+
+# Create a turtle
+star_turtle = turtle.Turtle()
+star_turtle.speed(0)
+star_turtle.hideturtle()
+
+# Draw the star
+for i in range(6):
+    star_turtle.forward(100)
+    star_turtle.backward(100)
+    star_turtle.right(60)
+
+# Close the turtle graphics window
+wn.mainloop()
+```

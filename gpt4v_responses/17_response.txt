@@ -1,0 +1,38 @@
+```python
+import turtle
+
+# Set up the screen
+wn = turtle.Screen()
+wn.bgcolor("white")
+
+# Create a turtle named "t"
+t = turtle.Turtle()
+t.speed(0)  # fastest speed
+t.hideturtle()  # hide the turtle
+
+# Draw the face
+t.up()
+t.goto(0, -100)
+t.down()
+t.circle(100)
+
+# Draw the eyes
+for i in range(2):
+    t.up()
+    t.goto(-35 + i*70, 35)
+    t.down()
+    t.circle(10)
+
+# Draw the nose
+t.up()
+t.goto(-15, 10)
+t.down()
+t.begin_fill()
+for i in range(3):
+    t.forward(30)
+    t.left(120)
+t.end_fill()
+
+# Close the window on click
+wn.exitonclick()
+```

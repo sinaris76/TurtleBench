@@ -1,0 +1,36 @@
+```python
+import turtle
+
+# Set up turtle environment
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
+
+# Define the shape drawing function
+def draw_shape(length, depth):
+    if depth == 0:
+        t.forward(length)
+    else:
+        draw_shape(length, depth-1)
+        t.left(90)
+        draw_shape(length, depth-1)
+        t.right(90)
+        draw_shape(length, depth-1)
+        t.right(90)
+        draw_shape(length, depth-1)
+        draw_shape(length, depth-1)
+        t.left(90)
+        draw_shape(length, depth-1)
+        t.left(90)
+        draw_shape(length, depth-1)
+        t.right(90)
+        draw_shape(length, depth-1)
+
+# Draw the shape
+for _ in range(4):
+    draw_shape(50, 2)
+    t.right(90)
+
+# End the drawing
+turtle.done()
+```

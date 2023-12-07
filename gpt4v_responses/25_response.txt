@@ -1,0 +1,28 @@
+```python
+import turtle
+
+# Set up the screen
+wn = turtle.Screen()
+wn.bgcolor("white")
+
+# Create turtle named "triangle_maker"
+triangle_maker = turtle.Turtle()
+triangle_maker.speed(0)  # Set the speed to the fastest
+triangle_maker.hideturtle()  # Hide the turtle icon
+
+# Draw four triangles in a row
+for _ in range(4):
+    triangle_maker.forward(100)
+    triangle_maker.left(120)
+    triangle_maker.forward(100)
+    triangle_maker.left(120)
+    triangle_maker.forward(100)
+    triangle_maker.left(120)
+    if _ < 3:  # Move to starting position of the next triangle
+        triangle_maker.penup()
+        triangle_maker.forward(100)
+        triangle_maker.pendown()
+
+# Close the window on a click
+wn.exitonclick()
+```

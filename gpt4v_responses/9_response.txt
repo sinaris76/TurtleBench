@@ -1,0 +1,20 @@
+```python
+import turtle
+
+t = turtle.Turtle()
+screen = turtle.Screen()
+t.speed(0)
+t.hideturtle()
+
+t.forward(100)
+t.left(90)
+t.circle(100, 180)
+t.left(90)
+t.forward(200)
+t.left(90)
+t.circle(100, 180)
+t.left(90)
+t.forward(100)
+
+turtle.done()
+```

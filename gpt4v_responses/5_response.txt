@@ -1,0 +1,21 @@
+```python
+import turtle
+
+def draw_triangle():
+    for _ in range(3):
+        turtle.forward(100)
+        turtle.left(120)
+
+turtle.speed(0)
+turtle.hideturtle()
+turtle.up()
+turtle.goto(-50, 0)
+turtle.down()
+draw_triangle()
+turtle.up()
+turtle.goto(50, 0)
+turtle.setheading(-60)
+turtle.down()
+draw_triangle()
+turtle.done()
+```

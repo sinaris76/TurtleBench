@@ -1,0 +1,24 @@
+```python
+import turtle
+
+screen = turtle.Screen()
+screen.tracer(0, 0)  # Turn off animation
+
+t = turtle.Turtle()
+t.hideturtle()
+t.speed(0)
+
+# Drawing the square
+for _ in range(4):
+    t.forward(200)
+    t.left(90)
+
+# Drawing the circle
+t.up()
+t.goto(0, -100)  # Circle radius is 100, starting at the bottom
+t.down()
+t.circle(100)
+
+screen.update()  # Update the drawing on the screen
+turtle.done()
+```

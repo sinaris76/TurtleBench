@@ -1,0 +1,18 @@
+```python
+import turtle
+
+turtle.speed('fastest')
+turtle.hideturtle()
+
+turtle.penup()
+turtle.goto(0, -100)
+turtle.pendown()
+turtle.circle(100)
+
+turtle.penup()
+turtle.goto(0, 100)
+turtle.pendown()
+turtle.circle(100)
+
+turtle.done()
+```

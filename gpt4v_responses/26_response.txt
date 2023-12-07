@@ -1,0 +1,28 @@
+```python
+import turtle
+
+# Set up the screen
+wn = turtle.Screen()
+wn.bgcolor("white")
+
+# Create a turtle
+t = turtle.Turtle()
+t.speed(0)  # Fastest speed
+t.hideturtle()  # Hide the turtle
+
+# Define the size of the rectangle
+rectangle_length = 100
+rectangle_height = 50
+
+# Draw three squares without lifting the pen
+for _ in range(3):
+    for _ in range(2):
+        t.forward(rectangle_length)
+        t.left(90)
+        t.forward(rectangle_height)
+        t.left(90)
+    t.forward(rectangle_length)
+
+# Hide the window after clicking on it
+wn.exitonclick()
+```

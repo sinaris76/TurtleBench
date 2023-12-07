@@ -1,0 +1,27 @@
+```python
+import turtle
+
+# Set up the screen
+wn = turtle.Screen()
+wn.bgcolor("white")
+
+# Create a turtle
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
+
+# Draw the square and diagonals
+for _ in range(4):
+    t.forward(100)
+    t.right(90)
+
+t.goto(0, 100)
+t.goto(100, 0)
+t.goto(0, 0)
+t.goto(100, 100)
+t.goto(0, 100)
+t.goto(100, 0)
+
+# Finish drawing
+turtle.done()
+```

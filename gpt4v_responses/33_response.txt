@@ -1,0 +1,15 @@
+```python
+import turtle
+
+def draw_circle(angle, distance):
+    for _ in range(2):
+        turtle.circle(distance, 180)
+        turtle.right(angle)
+
+turtle.speed(0)
+turtle.hideturtle()
+draw_circle(60, 100)
+turtle.right(120)
+draw_circle(60, 100)
+turtle.done()
+```

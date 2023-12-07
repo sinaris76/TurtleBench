@@ -1,0 +1,21 @@
+```python
+import turtle
+
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
+
+for _ in range(2):
+    t.forward(100)
+    t.backward(100)
+    t.left(120)
+
+t.left(120)
+
+for _ in range(2):
+    t.forward(100)
+    t.backward(100)
+    t.right(120)
+
+turtle.done()
+```

@@ -1,0 +1,21 @@
+```python
+import turtle
+
+# Set up the turtle
+t = turtle.Turtle()
+t.speed('fastest')
+t.hideturtle()
+
+# Draw the square
+for _ in range(4):
+    t.forward(100)
+    t.left(90)
+
+# Draw the triangle
+t.goto(0, 100)
+t.goto(100, 100)
+t.goto(100, 0)
+
+# Finish drawing
+turtle.done()
+```

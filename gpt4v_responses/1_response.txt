@@ -1,0 +1,12 @@
+```python
+import turtle
+
+screen = turtle.Screen()
+t = turtle.Turtle()
+
+t.speed(0)
+t.hideturtle()
+t.circle(100)
+
+screen.mainloop()
+```

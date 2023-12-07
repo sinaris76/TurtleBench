@@ -1,0 +1,50 @@
+```python
+import turtle
+
+def draw_pentagon():
+    for _ in range(5):
+        turtle.forward(100)
+        turtle.right(72)
+
+turtle.speed(0)
+turtle.hideturtle()
+
+# Draw top pentagon
+draw_pentagon()
+turtle.right(72)
+
+# Draw left upper pentagon
+turtle.forward(100)
+draw_pentagon()
+turtle.backward(100)
+
+# Draw right upper pentagon
+turtle.left(72)
+turtle.forward(100)
+turtle.right(72)
+draw_pentagon()
+turtle.left(72)
+turtle.backward(100)
+turtle.right(72)
+
+# Draw left bottom pentagon
+turtle.backward(100)
+turtle.left(72)
+turtle.forward(100)
+turtle.right(72)
+draw_pentagon()
+turtle.left(72)
+turtle.backward(100)
+turtle.right(72)
+
+# Draw right bottom pentagon
+turtle.backward(100)
+turtle.right(144)
+turtle.forward(100)
+turtle.left(72)
+draw_pentagon()
+turtle.right(72)
+turtle.backward(100)
+
+turtle.done()
+```
