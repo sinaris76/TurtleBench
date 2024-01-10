@@ -1,20 +1,23 @@
 ```python
 import turtle
 
-t = turtle.Turtle()
 screen = turtle.Screen()
-t.speed(0)
-t.hideturtle()
+screen.bgcolor("white")
 
-t.forward(100)
+t = turtle.Turtle()
+t.speed("fastest")
+t.hideturtle()
+t.up()
+t.goto(0, -100)
+t.down()
 t.left(90)
-t.circle(100, 180)
-t.left(90)
-t.forward(200)
-t.left(90)
-t.circle(100, 180)
-t.left(90)
-t.forward(100)
+t.circle(100, -180)
+t.up()
+t.goto(0, 100)
+t.down()
+t.right(180)
+t.circle(100, -180)
+t.hideturtle()
 
 turtle.done()
 ```

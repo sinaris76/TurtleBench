@@ -1,0 +1,7 @@
+The images you've provided both contain geometric shapes (triangles) within a square, but the patterns shown are different.
+
+In the first image, there is a large square with a complex pattern of triangles inside. The triangles are arranged such that they do not cover the entire square, leaving some areas within the square unfilled.
+
+In the second image, there is a smaller square also with a pattern of triangles inside. Unlike the first image, the triangles in the second one cover the entire square, forming an 'X' shape across the square.
+
+So, while they both contain triangles within a square, the specific patterns and the way the triangles fill the square are not similar.

@@ -1,0 +1,8 @@
+To create the same shape in Python using the turtle library, you can use the following code:
+
+```python
+t = turtle.pyplot.plot(None, None, None, '-o')
+t.show()
+```
+
+This code creates a simple line plot, which is not the exact shape of a triangle, but it's the closest representation available in the turtle library.</s>

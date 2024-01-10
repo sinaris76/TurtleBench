@@ -2,27 +2,25 @@
 import turtle
 
 screen = turtle.Screen()
-screen.tracer(0)
+screen.setup(width=700, height=700)
 
 t = turtle.Turtle()
-t.speed(0)
+t.speed("fastest")
 t.hideturtle()
 
-# Circle
-t.up()
-t.goto(0, -100)
-t.down()
-t.circle(100)
-
-# Square
-t.up()
-t.goto(-70, 70)
-t.down()
-t.setheading(270)
+# Draw square
+t.penup()
+t.goto(-50, -50)
+t.pendown()
 for _ in range(4):
-    t.forward(140)
+    t.forward(100)
     t.left(90)
 
-screen.update()
+# Draw circle
+t.penup()
+t.goto(0, -50)
+t.pendown()
+t.circle(50)
+
 screen.mainloop()
 ```

@@ -1,0 +1,15 @@
+To create the same shape in Python using the turtle library, you can use the following code:
+
+```python
+import turtle
+
+t = turtle.pyplot()
+
+t.plot(x=0, y=0, z=0, color='black', linestyle='--', linewidth=2)
+t.plot(x=0, y=1, z=0, color='black', linestyle='--', linewidth=2)
+t.plot(x=1, y=0, z=0, color='black', linestyle='--', linewidth=2)
+t.plot(x=1, y=1, z=0, color='black', linestyle='--', linewidth=2)
+
+t.show()
+```
+This code creates a 3D plot with two lines intersecting at a right angle, similar to the shape in the image.</s>

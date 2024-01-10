@@ -1,21 +1,34 @@
 ```python
 import turtle
 
-def draw_triangle(t, length):
-    for _ in range(3):
-        t.forward(length)
-        t.left(120)
+# Setup the screen
+wn = turtle.Screen()
 
-def draw_double_triangle(t, base_length):
-    draw_triangle(t, base_length)
-    t.forward(base_length)
-    draw_triangle(t, base_length / 2)
-
+# Create a turtle instance
 t = turtle.Turtle()
-t.speed('fastest')
+
+# Set the speed and hide the turtle
+t.speed(0)
 t.hideturtle()
 
-draw_double_triangle(t, 200)
+# Draw the triangles
+def draw_triangle(base_length):
+    for _ in range(3):
+        t.forward(base_length)
+        t.left(120)
 
+# Draw the larger triangle
+draw_triangle(200)
+
+# Position for the smaller triangle
+t.forward(200)
+t.left(120)
+t.forward(100)
+t.left(120)
+
+# Draw the smaller triangle
+draw_triangle(100)
+
+# Finish drawing
 turtle.done()
 ```

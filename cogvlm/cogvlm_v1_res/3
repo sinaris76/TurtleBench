@@ -1,0 +1,9 @@
+To create the same shape in Python using the turtle library, you can use the following code:
+
+```python
+import turtle
+
+t = turtle.pentagon()
+t.show()
+```
+This code will display a pentagon shape.</s>

@@ -1,0 +1,8 @@
+To create the same shape in Python using the turtle library, you can use the following code:
+
+```python
+t = turtle()
+t.draw('t', 4, 4, 0)
+t.show()
+```
+This code will create a turtle and draw a plus sign with the given dimensions.</s>

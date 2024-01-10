@@ -1,0 +1,11 @@
+To create the same shape using Python's turtle library, you can use the following code:
+
+```python
+import turtle
+
+t = turtle.Turtle()
+t.set_color('black')
+t.draw(t.polygon(9, 0, 140, 140, 90, 0))
+t.show()
+```
+This code creates a turtle and draws a 9-pointed star using the `polygon` function.</s>

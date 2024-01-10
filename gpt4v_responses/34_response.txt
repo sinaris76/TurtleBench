@@ -1,33 +1,19 @@
 ```python
 import turtle
 
-# Set up the screen
-wn = turtle.Screen()
-wn.bgcolor("white")
+t = turtle.Turtle()
+t.speed("fastest")
+t.hideturtle()
 
-# Create a turtle
-shape_turtle = turtle.Turtle()
-shape_turtle.speed('fastest')  # Set the speed to the highest
-shape_turtle.hideturtle()  # Hide the turtle
-
-# Draw the shape
 for _ in range(4):
-    shape_turtle.forward(100)
-    shape_turtle.right(90)
-    shape_turtle.forward(25)
-    shape_turtle.right(90)
-    shape_turtle.forward(75)
-    shape_turtle.left(90)
-    shape_turtle.forward(25)
-    shape_turtle.left(90)
-    shape_turtle.forward(25)
-    shape_turtle.right(90)
+    t.forward(100)
+    t.right(90)
+    t.forward(50)
+    t.right(90)
+    t.forward(100)
+    t.left(90)
+    t.forward(50)
+    t.left(90)
 
-    # Move to the initial position for the next arm
-    shape_turtle.left(90)
-    shape_turtle.forward(75)
-    shape_turtle.left(90)
-
-# Finish drawing
 turtle.done()
 ```

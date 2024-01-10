@@ -1,23 +1,31 @@
 ```python
 import turtle
 
-def draw_square(t, size):
-    for _ in range(4):
-        t.forward(size)
-        t.left(90)
+# Set up the screen
+wn = turtle.Screen()
+wn.bgcolor("white")
 
-def draw_rotated_square(t, size, angle):
-    t.left(angle)
-    draw_square(t, size)
-    t.right(angle)
-
+# Create a turtle
 t = turtle.Turtle()
-t.speed('fastest')
+t.speed(0)  # Fastest speed
 t.hideturtle()
+t.pensize(2)
 
-draw_square(t, 100)          # Draw first square
-t.forward(100)               # Move to position for the second square
-draw_rotated_square(t, 100, 45) # Draw second, rotated square
+# Draw the figure
+for _ in range(3):
+    t.forward(100)
+    t.left(90)
+t.forward(100)
+t.right(45)
+t.forward(70.7107)  # Length of the diagonal of the square
+t.right(90)
+t.forward(70.7107)
+t.right(45)
+t.forward(100)
+for _ in range(2):
+    t.left(90)
+    t.forward(100)
 
-turtle.done()
+# Finish drawing
+wn.mainloop()
 ```

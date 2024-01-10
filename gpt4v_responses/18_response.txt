@@ -1,21 +1,29 @@
 ```python
 import turtle
 
+screen = turtle.Screen()
+screen.tracer(0)
+
 t = turtle.Turtle()
 t.speed(0)
 t.hideturtle()
 
-for _ in range(2):
-    t.forward(100)
-    t.backward(100)
-    t.left(120)
+def draw_triangle():
+    for _ in range(3):
+        t.forward(100)
+        t.left(120)
 
+# Draw the first triangle (upward)
+draw_triangle()
+
+# Position turtle to draw the second triangle (downward)
+t.right(120)
+t.forward(100)
 t.left(120)
 
-for _ in range(2):
-    t.forward(100)
-    t.backward(100)
-    t.right(120)
+# Draw the second triangle
+draw_triangle()
 
+screen.update()
 turtle.done()
 ```

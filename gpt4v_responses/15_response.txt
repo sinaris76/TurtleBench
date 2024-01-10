@@ -1,39 +1,51 @@
 ```python
 import turtle
 
-# Create a turtle screen and set up the turtle
-screen = turtle.Screen()
-t = turtle.Turtle()
-t.speed("fastest")
-t.hideturtle()
+# Set up the screen
+wn = turtle.Screen()
+wn.bgcolor("white")
 
-# Size of the square
-size = 100
+# Create turtle
+shape_maker = turtle.Turtle()
+shape_maker.speed("fastest")
+shape_maker.hideturtle()
 
-# Draw squares and diagonal lines inside
-for _ in range(4):
-    t.forward(size)
-    t.left(90)
+# Function to draw square
+def draw_square(size):
+    for _ in range(4):
+        shape_maker.forward(size)
+        shape_maker.left(90)
 
-for _ in range(4):
-    t.forward(size)
-    t.backward(size)
-    t.left(90)
+# Function to draw a line from one point to another
+def draw_line(start, end):
+    shape_maker.penup()
+    shape_maker.goto(start)
+    shape_maker.pendown()
+    shape_maker.goto(end)
 
-# Draw the bigger diamond shape
-t.goto(0, size)
-t.goto(-size, 0)
-t.goto(0, -size)
-t.goto(size, 0)
-t.goto(0, size)
+# Draw squares and diagonals
+square_size = 100
+half_size = square_size / 2
 
-# Draw the crossed lines
-t.goto(-size, 0)
-t.goto(size, 0)
-t.goto(0, -size)
-t.goto(0, size)
+# Draw the main square
+shape_maker.penup()
+shape_maker.goto(-half_size, half_size)
+shape_maker.pendown()
+draw_square(square_size)
 
-# Hide the turtle and finish
-t.hideturtle()
-screen.mainloop()
+# Draw the diagonals of the main square
+draw_line((-half_size, half_size), (half_size, -half_size))
+draw_line((-half_size, -half_size), (half_size, half_size))
+
+# Draw the corner triangles, which form a larger square
+for angle in [45, -45, -135, 135]:
+    shape_maker.penup()
+    shape_maker.goto(0, 0)
+    shape_maker.setheading(angle)
+    shape_maker.forward(half_size * (2 ** 0.5))
+    shape_maker.setheading(angle - 90)
+    shape_maker.pendown()
+    draw_square(half_size * (2 ** 0.5))
+
+wn.mainloop()
 ```

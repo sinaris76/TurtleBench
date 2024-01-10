@@ -1,0 +1,15 @@
+To create the same shape in Python using the turtle library, you can use the following code:
+
+```python
+import turtle
+
+t = turtle.Turtle()
+t.set_screen_size(100, 100)
+t.set_color('black')
+t.begin_fill()
+t.polygon(points, fillcolor='black')
+t.end_fill()
+t.show()
+```
+
+This code sets up a turtle with a black color, creates a polygon using the given points, and then displays the shape.</s>

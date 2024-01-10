@@ -1,0 +1,11 @@
+To create the same shape in Python using the turtle library, you can use the following code:
+
+```python
+import turtle
+
+t = turtle.Turtle()
+t.circle(2, fill='black', radius=1)
+t.circle(2, fill='black', radius=1)
+t.show()
+```
+This code creates two circles with a radius of 1, filling them with black color.</s>

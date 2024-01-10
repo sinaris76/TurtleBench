@@ -1,0 +1,11 @@
+To create the same shape in Python using the turtle library, you can use the following code:
+
+```python
+import turtle
+
+t = turtle.Turtle()
+t.set_color('black')
+t.draw(turtle.triangle(120, 60, 60))
+t.show()
+```
+This code creates a black triangle with a base of 60 degrees on both sides.</s>

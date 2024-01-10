@@ -2,11 +2,17 @@
 import turtle
 
 screen = turtle.Screen()
+screen.tracer(0, 0)  # Turn off animation
+
 t = turtle.Turtle()
+t.speed('fastest')  # Set the speed to the fastest
+t.hideturtle()  # Hide the turtle cursor
 
-t.speed(0)
-t.hideturtle()
-t.circle(100)
+t.penup()
+t.goto(0, -100)  # Position the turtle at the bottom of the circle
+t.pendown()
+t.circle(100)  # Draw a circle with a radius of 100
 
-screen.mainloop()
+screen.update()  # Update the screen to show the drawing
+screen.mainloop()  # Keep the window open
 ```

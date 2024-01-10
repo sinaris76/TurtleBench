@@ -3,7 +3,9 @@ import base64
 import requests
 from dotenv import load_dotenv
 import os
-
+from sandbox import execute_combined_code
+from utils.code_analysis import find_screen_variable_name
+import subprocess
 
 def encode_image(image_path):
   with open(image_path, "rb") as image_file:
@@ -54,7 +56,23 @@ for conf in config:
     ],
     "max_tokens": 1000
   }
+
   response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
   response_text = response.json()["choices"][0]["message"]["content"]
   with open(f'gpt4v_responses/{conf["id"]}_response.txt', "w+") as f:
     f.write(response_text)
+  clean_code = response_text.strip('`').replace('python', '', 1).replace('turtle.done()', '')\
+    .replace('.mainloop()', '').replace('.exitonclick()', '')
+  svn = find_screen_variable_name(clean_code)
+  subprocess
+  code = execute_combined_code(clean_code, 'GPT4V', conf["id"], svn)
+  file_path = 'file_path_{}.py'.format(conf["id"])
+  with open(file_path, 'w') as file:
+    file.write(code)
+  completed_process = subprocess.run(['python', file_path])
+  if completed_process.returncode == 0:
+    os.remove(file_path)
+  else:
+    print("Process failed, return code:", completed_process.returncode)
+
+  

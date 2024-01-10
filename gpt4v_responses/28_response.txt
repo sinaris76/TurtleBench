@@ -1,27 +1,24 @@
 ```python
 import turtle
 
-# Set up the screen
-wn = turtle.Screen()
-wn.bgcolor("white")
-
-# Create a turtle
+# create turtle object
 t = turtle.Turtle()
+
+# set the speed and hide the turtle
 t.speed(0)
 t.hideturtle()
 
-# Draw the square and diagonals
+# draw a square
 for _ in range(4):
     t.forward(100)
-    t.right(90)
+    t.left(90)
 
+# draw the diagonals
 t.goto(0, 100)
 t.goto(100, 0)
 t.goto(0, 0)
 t.goto(100, 100)
-t.goto(0, 100)
-t.goto(100, 0)
 
-# Finish drawing
+# finish drawing
 turtle.done()
 ```

@@ -1,20 +1,14 @@
 ```python
 import turtle
 
-# Create a turtle screen and set parameters
 screen = turtle.Screen()
-screen.bgcolor("white")
-
-# Create a turtle
 t = turtle.Turtle()
 t.speed(0)
 t.hideturtle()
 
-# Draw a triangle
 for _ in range(3):
     t.forward(100)
     t.left(120)
 
-# Finish drawing
 screen.mainloop()
 ```

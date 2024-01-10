@@ -33,4 +33,9 @@
 {"id": 33, "category": "Patterned Composition", "level": "Hard", "mathLevel": "G-8", "hasLangDesc": false}
 {"id": 34, "category": "Patterned Composition", "level": "Medium", "mathLevel": "G-7", "hasLangDesc": false}
 {"id": 35, "category": "Outer Composition", "level": "Medium", "mathLevel": "G-6", "hasLangDesc": true, "languageDescription":"a combination of a semicircle on top and an equilateral triangle beneath it, sharing the same base, resembling an ice cream cone"}
-{"id": 35, "category": "Outer Composition", "level": "Easy", "mathLevel": "G-4", "hasLangDesc": true, "languageDescription":"two distinct circles placed adjacently, touching at one ponint. The larger circle is to the left, and the smaller circle is to the right."}
+{"id": 36, "category": "Outer Composition", "level": "Easy", "mathLevel": "G-4", "hasLangDesc": true, "languageDescription":"two distinct circles placed adjacently, touching at one point. The larger circle is to the left, and the smaller circle is to the right."}
+{"id": 37, "category": "Single Shape", "level": "Medium", "mathLevel": "G-6", "hasLangDesc": true, "languageDescription":"a simple line drawing of a semicircle that is intersected by two horizontal lines at its base."}
+{"id": 38, "category": "Outer Composition", "level": "Easy", "mathLevel": "G-6", "hasLangDesc": true, "languageDescription":"three circles with different radi lengths all sharing only one point"}
+{"id": 39, "category": "Outer Composition", "level": "Medium", "mathLevel": "G-6", "hasLangDesc": true, "languageDescription":"Three concentric circles"}
+{"id": 40, "category": "Patterned Composition", "level": "Medium", "mathLevel": "G-6", "hasLangDesc": false}
+{"id": 41, "category": "Patterned Composition", "level": "Medium", "mathLevel": "G-6", "hasLangDesc": false}

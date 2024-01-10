@@ -2,23 +2,27 @@
 import turtle
 
 screen = turtle.Screen()
-screen.tracer(0, 0)  # Turn off animation
+screen.tracer(0, 0)
 
 t = turtle.Turtle()
-t.hideturtle()
 t.speed(0)
+t.hideturtle()
 
-# Drawing the square
+# drawing the square
+t.penup()
+t.goto(-100, 100)
+t.pendown()
 for _ in range(4):
     t.forward(200)
-    t.left(90)
+    t.right(90)
 
-# Drawing the circle
-t.up()
-t.goto(0, -100)  # Circle radius is 100, starting at the bottom
-t.down()
+# drawing the circle
+t.penup()
+t.goto(0, -100)
+t.setheading(0)
+t.pendown()
 t.circle(100)
 
-screen.update()  # Update the drawing on the screen
+screen.update()
 turtle.done()
 ```

@@ -2,24 +2,20 @@
 import turtle
 
 screen = turtle.Screen()
-screen.setup(800, 600)
-
 t = turtle.Turtle()
 t.speed(0)
 t.hideturtle()
 
-# Draw a circle
+# Draw circle
 t.circle(100)
 
 # Draw the lines
-for angle in range(0, 360, 45):
-    t.up()
-    t.goto(0, 0)
+for angle in [0, 45, 90, 135, 180, 225, 270, 315]:
     t.setheading(angle)
-    t.down()
+    t.penup()
+    t.goto(0, 0)
+    t.pendown()
     t.forward(100)
-    t.up()
-    t.backward(100)
 
-turtle.done()
+screen.mainloop()
 ```

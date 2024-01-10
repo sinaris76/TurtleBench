@@ -1,34 +1,28 @@
 ```python
 import turtle
 
-def draw_branch(turtle, branch_length, angle, level):
-    if level <= 0:
-        return
-    else:
-        turtle.forward(branch_length)
-        turtle.left(angle)
-        draw_branch(turtle, branch_length * 0.6, angle, level - 1)
-        turtle.right(angle * 2)
-        draw_branch(turtle, branch_length * 0.6, angle, level - 1)
-        turtle.left(angle)
-        turtle.backward(branch_length)
+def draw_branch(t, branch_length, shorten_by, angle):
+    if branch_length > 4:
+        t.forward(branch_length)
+        new_length = branch_length - shorten_by
 
-def tree():
-    screen = turtle.Screen()
-    screen.setup(width=800, height=600)
+        t.left(angle)
+        draw_branch(t, new_length, shorten_by, angle)
 
-    t = turtle.Turtle()
-    t.speed('fastest')
-    t.hideturtle()
-    
-    t.up()
-    t.goto(0, -200)
-    t.down()
-    t.left(90)
+        t.right(angle * 2)
+        draw_branch(t, new_length, shorten_by, angle)
 
-    draw_branch(t, 100, 20, 4)
+        t.left(angle)
+        t.backward(branch_length)
 
-    screen.mainloop()
+turtle.setup(800, 600)
+screen = turtle.Screen()
+t = turtle.Turtle()
+t.speed('fastest')
+turtle.hideturtle()
 
-tree()
+t.left(90)
+draw_branch(t, 100, 15, 30)
+
+screen.exitonclick()
 ```

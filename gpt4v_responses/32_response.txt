@@ -1,18 +1,22 @@
 ```python
 import turtle
 
-turtle.speed('fastest')
-turtle.hideturtle()
+screen = turtle.Screen()
+screen.bgcolor("white")
 
-turtle.penup()
-turtle.goto(0, -100)
-turtle.pendown()
-turtle.circle(100)
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
 
-turtle.penup()
-turtle.goto(0, 100)
-turtle.pendown()
-turtle.circle(100)
+t.up()
+t.goto(0, -100)
+t.down()
+t.circle(100)
+
+t.up()
+t.goto(0, 100)
+t.down()
+t.circle(100)
 
 turtle.done()
 ```

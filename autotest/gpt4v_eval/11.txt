@@ -1,0 +1,5 @@
+Yes, both images display a similar pattern called the Sierpinski triangle or Sierpinski gasket. It's a fractal and attractive fixed set with the overall shape of an equilateral triangle, subdivided recursively into smaller equilateral triangles. 
+
+In the first image, the pattern seems to be at the beginning stages of its construction. A larger equilateral triangle contains an inverted triangle that creates four smaller triangles, and the pattern continues within one of those.
+
+The second image shows a more advanced stage of the pattern with several levels of recursively subdivided triangles. Each iteration adds smaller triangles within the previous level's triangles, filling out the fractal design more completely.

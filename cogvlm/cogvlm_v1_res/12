@@ -1,0 +1,12 @@
+To create the same shape in Python using the turtle library, you can use the following code:
+
+```python
+import turtle
+
+t = turtle.Turtle()
+t.set_position(0, 0, 0)
+t.set_radius(200)
+t.draw_circle(200, 0, 0)
+t.show()
+```
+This code sets the turtle's position to the center, sets its radius to 200, and then draws a circle with that radius.</s>

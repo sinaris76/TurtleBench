@@ -1,25 +1,26 @@
 ```python
 import turtle
 
+# Set up the turtle
 t = turtle.Turtle()
-t.speed("fastest")
+t.speed('fastest')
 t.hideturtle()
 
-# Draw the first square
-for _ in range(4):
-    t.forward(100)
-    t.left(90)
+# Define a function to draw a square with side length s
+def draw_square(s):
+    for _ in range(4):
+        t.forward(s)
+        t.right(90)
 
-# Move to the position to draw the second square
-t.forward(100)
+# Draw the first square
+draw_square(100)
 t.right(90)
 t.forward(100)
 t.left(90)
 
 # Draw the second square
-for _ in range(4):
-    t.forward(100)
-    t.left(90)
+draw_square(100)
 
+# Finish drawing
 turtle.done()
 ```

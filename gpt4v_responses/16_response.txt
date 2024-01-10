@@ -1,48 +1,30 @@
 ```python
 import turtle
 
-t = turtle.Turtle()
-t.speed(0)
-t.hideturtle()
+turtle.speed(0)  # Set the speed to the highest
+turtle.hideturtle()  # Hide the turtle
 
-def draw_triangle(side_length):
-    for _ in range(3):
-        t.forward(side_length)
-        t.left(120)
+# Start drawing the shape
+turtle.forward(200)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(135)
+turtle.forward(141.42)
+turtle.left(135)
+turtle.forward(200)
+turtle.left(135)
+turtle.forward(141.42)
+turtle.right(135)
+turtle.forward(100)
+turtle.right(45)
+turtle.forward(141.42)
+turtle.right(135)
+turtle.forward(200)
+turtle.right(45)
+turtle.forward(141.42)
+turtle.right(90)
+turtle.forward(100)
 
-def draw_shape():
-    side_length = 200  # Example side length
-
-    # Drawing the main triangle
-    draw_triangle(side_length)
-
-    # Drawing the overlapping triangles
-    t.forward(side_length / 2)
-    t.left(60)
-    draw_triangle(side_length / 2)
-
-    # Repositioning the turtle
-    t.right(60)
-    t.forward(side_length / 2)
-    t.right(120)
-
-    # Smaller triangle on the right side
-    draw_triangle(side_length / 2)
-
-    # Positioning to start the hexagon at the top
-    t.forward(side_length / 2)
-    t.right(120)
-    t.forward(side_length / 2)
-    t.left(60)
-
-    # Drawing the hexagon
-    for _ in range(6):
-        t.forward(side_length / 2)
-        t.right(60)
-
-# Drawing the shape
-draw_shape()
-
-# To prevent the window from closing immediately
+# Finish drawing
 turtle.done()
 ```

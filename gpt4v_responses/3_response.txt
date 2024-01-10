@@ -2,7 +2,7 @@
 import turtle
 
 t = turtle.Turtle()
-t.speed('fastest')
+t.speed(0)
 t.hideturtle()
 
 for _ in range(4):

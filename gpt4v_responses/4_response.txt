@@ -5,11 +5,10 @@ t = turtle.Turtle()
 t.speed(0)
 t.hideturtle()
 
-angles = [72, 72, 72, 144, 144]
-
+angles = [72, -144, 72, 72, 72]
 for angle in angles:
     t.forward(100)
-    t.right(180 - angle)
+    t.right(angle)
 
 turtle.done()
 ```

@@ -1,0 +1,10 @@
+To create the same shape in Python using the turtle library, you can use the following code:
+
+```python
+import turtle
+
+t = turtle.pyplot()
+t.plot(t.radius(1.5), t.radius(1.5), '-o')
+t.show()
+```
+This code creates a circle with a radius of 1.5 and another circle with the same radius, connected by a straight line.</s>

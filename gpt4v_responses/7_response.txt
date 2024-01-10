@@ -8,21 +8,20 @@ wn.bgcolor("white")
 # Create a turtle
 shape_turtle = turtle.Turtle()
 shape_turtle.speed(0)  # Highest speed
-shape_turtle.hideturtle()  # Hide turtle
+shape_turtle.hideturtle()  # Hide the turtle
 
-# Draw a square
+# Draw the shape
 for _ in range(4):
     shape_turtle.forward(100)
     shape_turtle.left(90)
-
-# Draw a triangle
 shape_turtle.forward(100)
-shape_turtle.left(135)
+shape_turtle.right(45)
+shape_turtle.forward(70.71)  # Diagonal of the square's half (approximation of sqrt(2)*50)
+shape_turtle.right(90)
 shape_turtle.forward(70.71)
-shape_turtle.left(90)
-shape_turtle.forward(70.71)
-shape_turtle.left(135)
+shape_turtle.right(45)
+shape_turtle.forward(100)
 
 # Finish drawing
-shape_turtle.done()
+wn.mainloop()
 ```
