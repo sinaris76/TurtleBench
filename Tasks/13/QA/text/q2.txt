@@ -1,0 +1,1 @@
+Give a code in Python turtle that in the given shape, slices the circle into 16 equal pieces.

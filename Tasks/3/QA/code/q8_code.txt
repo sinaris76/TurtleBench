@@ -1,0 +1,11 @@
+from math import sqrt
+t.setheading(0)
+for i in range(4):
+  t.forward(150)
+  t.right(90)
+t.right(45)
+t.forward(150 * sqrt(2))
+t.right(135)
+t.forward(150)
+t.right(135)
+t.forward(150 * sqrt(2))

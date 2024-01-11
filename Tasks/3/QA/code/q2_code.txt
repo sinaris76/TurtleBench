@@ -1,0 +1,6 @@
+t.setheading(90)
+for i in range(3):
+  t.forward(200)
+  t.right(90)
+t.right(90)
+t.circle(100, 180)

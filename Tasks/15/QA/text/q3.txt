@@ -1,0 +1,1 @@
+Give a code in Python turtle that increases the number of small squares from 8 to 12 by following the same pattern of rotations.

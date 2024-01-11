@@ -1,0 +1,1 @@
+Give a code in Python turtle that in the given shape adds an ascending staircase to the right of the existing one of a similar length.

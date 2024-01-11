@@ -1,0 +1,1 @@
+Give a code in Python turtle that in the given shape, draws two diameters of the circle that exactly lay over the diagonals of the square.

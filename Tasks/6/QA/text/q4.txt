@@ -1,0 +1,1 @@
+Give a code in Python Turtle creates the given shape but with the left triangle upside down.

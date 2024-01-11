@@ -1,0 +1,4 @@
+t.setheading(180)
+t.circle(70, 180)
+t.left(90)
+t.forward(140)

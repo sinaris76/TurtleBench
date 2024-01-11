@@ -1,0 +1,1 @@
+Give a code in Python Turtle that creates the given shape + its diagonals and removes the sides on the left and right.

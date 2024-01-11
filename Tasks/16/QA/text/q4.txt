@@ -1,0 +1,1 @@
+Give a code in Python turtle that in the given shape, removes the second smallest triangle, the fourth smallest triangle, the sixth smallest triangle, and the eighth smallest triangle.

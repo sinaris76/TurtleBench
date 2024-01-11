@@ -1,0 +1,7 @@
+t.circle(100, 360)
+t.left(180)
+t.forward(100)
+t.right(90)
+draw_polygon(4, 200)
+t.right(135)
+t.circle(142, 360)

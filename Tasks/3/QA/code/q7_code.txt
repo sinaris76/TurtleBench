@@ -1,0 +1,8 @@
+t.setheading(0)
+for i in range(4):
+  if i % 2 == 1:
+    t.penup()
+  else:
+    t.down()
+  t.forward(150)
+  t.right(90)

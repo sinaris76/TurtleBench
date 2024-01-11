@@ -1,0 +1,1 @@
+Give a code in Python turtle that in the given shape, slices the bigger square into 4 smaller equal squares.

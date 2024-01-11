@@ -1,0 +1,6 @@
+t.setheading(60)
+for i in range(4):
+  for j in range(2):
+    t.forward(100)
+    t.right(120)
+  t.left(150)

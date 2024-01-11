@@ -1,0 +1,1 @@
+Give a code in Python Turtle that recreates the same shape rotated by 45 degrees.

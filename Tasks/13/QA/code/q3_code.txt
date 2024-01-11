@@ -1,0 +1,11 @@
+for i in range(3):
+  t.forward(100)
+  t.right(180)
+  t.forward(200)
+  t.right(180)
+  t.forward(100)
+  t.right(60)
+
+t.forward(100)
+t.right(270)
+t.circle(100)

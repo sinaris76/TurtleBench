@@ -1,5 +1,5 @@
 def poly(side, angle):
-  for i in range(20):
+  for i in range(8):
     t.forward(side)
     t.right(angle)
     

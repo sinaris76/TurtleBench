@@ -1,0 +1,5 @@
+for i in range(8):
+  t.forward(50)
+  t.right(135)
+  t.forward(50)
+  t.left(90)

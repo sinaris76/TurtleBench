@@ -2,7 +2,7 @@ canvas = {screen_variable_name}.getcanvas()
 canvas.postscript(file='ps_file.ps', colormode='color')
 SAVE_DIR = os.path.join(os.getcwd(), "autotest")
 # Convert the PostScript file to PNG using ImageMagick
-png_file = os.path.join(SAVE_DIR, f"{model}_{id}.jpg")
+png_file = os.path.join(SAVE_DIR, f"{model}_{id}_{question_number}.jpg")
 subprocess.run(['magick', 'ps_file.ps', png_file])
 {screen_variable_name}.bye()
 #os.remove('ps_file.ps')

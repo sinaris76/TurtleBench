@@ -1,0 +1,7 @@
+t.setheading(36)
+t.penup()
+for i in range(5):
+  if i == 2:
+    t.pendown()
+  t.forward(100)
+  t.right(72)

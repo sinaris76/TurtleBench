@@ -1,0 +1,13 @@
+def draw_right_isoceles(side_length):
+  t.forward(side_length)
+  t.left(90)
+  t.forward(side_length)
+  t.left(135)
+  t.forward(side_length * sqrt(2))
+for i in range(8):
+  if i % 2 == 1:
+    t.up()
+  else: 
+    t.down()
+  draw_right_isoceles(16 * sqrt(2 ** (i)))
+  t.right(180)

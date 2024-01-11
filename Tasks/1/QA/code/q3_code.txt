@@ -1,0 +1,7 @@
+t.setheading(90)
+for i in range(4):
+        if i % 2 == 0:
+          t.penup()
+        else:
+          t.pendown()
+        t.circle(100, 90)

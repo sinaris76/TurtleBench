@@ -1,0 +1,22 @@
+def draw_polygon(sides, length):
+  outer_turn = 360 / sides 
+  for _ in range(sides):
+    t.forward(length)
+    t.right(outer_turn)
+
+n_sides = 3
+sides_length = 30
+inner_angle = (n_sides - 2) * 180 / n_sides
+side_turn = 180 - inner_angle
+t.forward(sides_length * 3)
+t.right(side_turn)
+draw_polygon(n_sides, sides_length * 3)
+t.right(90 + inner_angle)
+t.forward(sides_length * 4)
+t.right(side_turn)
+draw_polygon(n_sides, sides_length * 4)
+t.left(180 - inner_angle)
+t.left(180 - atan((0.75)) * 180 / pi)
+t.forward(sides_length * 5)
+t.right(side_turn)
+draw_polygon(n_sides, sides_length * 5)

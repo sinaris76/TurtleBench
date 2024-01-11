@@ -1,0 +1,1 @@
+Give a code in Python turtle that in the given shape fills the gaps between the triangles with new triangles of the same size.

@@ -1,0 +1,5 @@
+for i in range(5):
+  t.forward(80)
+  t.circle(20)
+  t.forward(-80)
+  t.right(72)

@@ -1,3 +1,4 @@
+t.setheading(180)
 def draw_polygon(sides, length):
   t.left(60)
   outer_turn = 360 / sides 

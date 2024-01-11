@@ -1,0 +1,5 @@
+for i in range(3):
+  t.circle(20, -180)
+  t.right(180)
+  t.circle(20, 180)
+  t.right(180)

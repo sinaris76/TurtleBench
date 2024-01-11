@@ -1,0 +1,1 @@
+Give a code in Python turtle that creates the same shape, with the triangle inside the square as the left side of the triangle lays over the left side of the square.

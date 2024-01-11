@@ -1,0 +1,12 @@
+from math import sqrt, pi, cos
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
+t.setheading(36)
+for i in range(5):
+  t.forward(100)
+  t.right(72)
+t.right(36)
+for i in range(5):
+  t.forward(2 * 100 * cos(pi / 5))
+  t.right(180 - 36)
