@@ -1,3 +1,4 @@
+turtle.update()
 canvas = {screen_variable_name}.getcanvas()
 canvas.postscript(file='ps_file.ps', colormode='color')
 SAVE_DIR = os.path.join(os.getcwd(), "autotest")

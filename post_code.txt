@@ -1,3 +1,4 @@
+turtle.update()
 wn = turtle.Screen()
 canvas = wn.getcanvas()
 canvas.postscript(file='ps_file.ps', colormode='color')

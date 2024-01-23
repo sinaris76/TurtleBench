@@ -27,15 +27,15 @@ def create_jsonl_from_folders(folder_path):
         for folder_name in os.listdir(folder_path):
           if not folder_name.isnumeric():
             continue
-          tasks += folder_name
+          tasks += [folder_name]
         numeric_tasks = [item for item in tasks if item.isdigit()]
         tasks = sorted(numeric_tasks, key=lambda x: int(x))
-
+        print(tasks)
         for task in tasks:
 
             # Paths for the QA text and image directories
-            qa_text_path = os.path.join(folder_path, folder_name, 'QA', 'text')
-            image_path = os.path.join(folder_path, folder_name, 'image', f'{folder_name}.png')
+            qa_text_path = os.path.join(folder_path, task, 'QA', 'text')
+            image_path = os.path.join(folder_path, task, 'image', f'{task}.png')
 
             # Reading all text files in the QA text directory
             for text_file in os.listdir(qa_text_path):
@@ -50,7 +50,7 @@ def create_jsonl_from_folders(folder_path):
 
                 # Creating the JSON object
                 json_object = {
-                    "id": folder_name,
+                    "id": task,
                     "question_number": extract_number_from_filename(text_file),
                     "query": text_content,
                     "base_shape": image_path
