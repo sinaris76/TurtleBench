@@ -37,7 +37,8 @@ for conf in config:
   prompt_base_image = conf['base_shape']
   base64_image = encode_image(prompt_base_image)
   question_number = conf['question_number']
-
+  if int(conf["id"]) < 47:
+    continue
   payload = {
     "model": "gpt-4-vision-preview",
     "messages": [
@@ -64,10 +65,12 @@ for conf in config:
   response_text = response.json()["choices"][0]["message"]["content"]
   with open(f'gpt4v_responses/{conf["id"]}_{question_number}_response.txt', "w+") as f:
     f.write(response_text)
-  clean_code = response_text.strip('`').replace('python', '', 1).replace('turtle.done()', '')\
+  clean_code = response_text.replace('`', '').replace('python', '', 1).replace('turtle.done()', '')\
     .replace('.mainloop()', '').replace('.exitonclick()', '')
-  svn = find_screen_variable_name(clean_code)
-  subprocess
+  try:
+    svn = find_screen_variable_name(clean_code)
+  except:
+    print("error on code : ", f'gpt4v_responses/{conf["id"]}_{question_number}_response.txt')
   code = execute_combined_code(clean_code, 'GPT4V', conf["id"], question_number, svn)
   file_path = 'file_path_{}.py'.format(conf["id"])
   with open(file_path, 'w') as file:

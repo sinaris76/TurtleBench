@@ -36,7 +36,7 @@ def create_jsonl_from_folders(folder_path):
             # Paths for the QA text and image directories
             qa_text_path = os.path.join(folder_path, task, 'QA', 'text')
             image_path = os.path.join(folder_path, task, 'image', f'{task}.png')
-
+            
             # Reading all text files in the QA text directory
             for text_file in os.listdir(qa_text_path):
                 if text_file.startswith('.'): 
@@ -45,15 +45,16 @@ def create_jsonl_from_folders(folder_path):
                 
                 # Reading the contents of the text file
                 with open(text_file_path, 'r') as file:
-                    print(text_file_path)
                     text_content = file.read().strip()
-
+                question_number = extract_number_from_filename(text_file)
+                result_shape_path  = os.path.join(folder_path, task, 'result_image', f'q{question_number}_image.png')
                 # Creating the JSON object
                 json_object = {
                     "id": task,
-                    "question_number": extract_number_from_filename(text_file),
+                    "question_number": question_number,
                     "query": text_content,
-                    "base_shape": image_path
+                    "base_shape": image_path,
+                    "result_shape": result_shape_path
                 }
 
                 # Writing the JSON object to the JSONL file
