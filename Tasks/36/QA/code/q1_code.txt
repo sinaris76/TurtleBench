@@ -1,4 +1,4 @@
 t.setheading(90)
-t.circle(100, 360)
+t.circle(large_circle_radius, 360)
 t.right(180)
-t.circle(50, 360)
+t.circle(small_circle_radius, 360)

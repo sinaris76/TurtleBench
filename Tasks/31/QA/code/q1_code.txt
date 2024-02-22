@@ -5,6 +5,6 @@ def draw_polygon(sides, length):
     t.right(outer_turn)
 
 t.setheading(0)
-draw_polygon(4, 100)
+draw_polygon(4, square_side)
 t.right(180)
-draw_polygon(4, 100)
+draw_polygon(4, square_side)

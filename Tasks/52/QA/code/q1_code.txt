@@ -1,0 +1,5 @@
+for i in range(8):
+  t.forward((1 + sqrt(2)) * square_side / (2 + sqrt(2)))
+  t.right(45)
+  t.forward((1 + sqrt(2)) * square_side / (2 + sqrt(2)))
+  t.right(90)

@@ -1,4 +1,4 @@
 t.setheading(0)
 for i in range(5):
-  t.forward(100)
+  t.forward(pentagon_side)
   t.right(72)

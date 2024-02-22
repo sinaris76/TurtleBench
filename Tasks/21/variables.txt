@@ -1,0 +1,2 @@
+angles_between_branches=90
+root_length=150

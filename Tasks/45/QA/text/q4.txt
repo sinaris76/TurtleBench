@@ -1,0 +1,1 @@
+Give a code in Python turtle creates the given shape + the diagonals of all of the smaller squares.

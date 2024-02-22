@@ -1,0 +1,5 @@
+t.circle(radius, 270)
+t.left(90)
+t.forward(radius)
+t.right(90)
+t.forward(radius)

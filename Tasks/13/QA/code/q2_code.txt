@@ -1,11 +1,11 @@
 for i in range(8):
-  t.forward(100)
+  t.forward(radius)
   t.right(180)
-  t.forward(200)
+  t.forward(2 * radius)
   t.right(180)
-  t.forward(100)
+  t.forward(radius)
   t.right(22.5)
 
-t.forward(100)
+t.forward(radius)
 t.right(270)
-t.circle(100)
+t.circle(radius)

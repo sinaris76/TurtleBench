@@ -1,0 +1,7 @@
+for i in range(1, 3):
+  t.circle(circles_radi[2 - i])
+  t.up()
+  t.right(90)
+  t.forward(40)
+  t.left(90)
+  t.down()

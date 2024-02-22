@@ -9,5 +9,5 @@ for i in range(8):
     t.up()
   else: 
     t.down()
-  draw_right_isoceles(16 * sqrt(2 ** (i)))
+  draw_right_isoceles(smallest_triangle_legs * sqrt(2 ** (i)))
   t.right(180)

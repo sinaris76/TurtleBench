@@ -1,4 +1,3 @@
-side = 80
 for _ in range(4):
   t.forward(side)
   t.left(90)

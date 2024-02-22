@@ -1,4 +1,4 @@
 t.setheading(0)
 for i in range(4):
-  t.forward(100)
+  t.forward(square_side)
   t.right(90)

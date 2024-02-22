@@ -5,5 +5,5 @@ def draw_right_isoceles(side_length):
   t.left(135)
   t.forward(side_length * sqrt(2))
 for i in range(8):
-	draw_right_isoceles(20 * sqrt(2 ** (i)))
-	t.right(180)
+        draw_right_isoceles(smallest_triangle_legs * sqrt(2 ** (i)))
+        t.right(180)

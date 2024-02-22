@@ -4,6 +4,6 @@ def draw_polygon(sides, length):
     t.forward(length)
     t.right(outer_turn)
 
-draw_polygon(3, 200)
+draw_polygon(3, triangle_side)
 t.right(90)
-t.circle(100, -180)
+t.circle(triangle_side/2, -180)

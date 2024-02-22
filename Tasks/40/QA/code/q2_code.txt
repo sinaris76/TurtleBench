@@ -1,0 +1,7 @@
+t.right(90)
+for i in range(2):
+        t.circle(large_semicircle_radius / 2)
+        t.right(180)
+
+t.circle(large_semicircle_radius / 2, 180)
+t.circle(large_semicircle_radius)

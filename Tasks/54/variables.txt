@@ -1,0 +1,1 @@
+small_hexagon_side=100

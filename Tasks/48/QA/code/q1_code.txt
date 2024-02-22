@@ -5,4 +5,4 @@ def draw_polygon(sides, length):
     t.right(outer_turn)
 
 for i in range(4):
-  draw_polygon(4, 20 * (i + 1))
+  draw_polygon(4, squares_sides[i])

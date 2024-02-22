@@ -1,0 +1,2 @@
+line_segment=80
+circle_radius=20

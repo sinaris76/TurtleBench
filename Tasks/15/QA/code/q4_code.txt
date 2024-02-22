@@ -6,5 +6,5 @@ def draw_polygon(sides, length):
 t.right(45)
 x = 4
 for i in range(x):
-  draw_polygon(4, 100)
+  draw_polygon(4, large_square_side / 2)
   t.right(360 / x)

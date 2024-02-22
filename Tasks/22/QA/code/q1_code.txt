@@ -1,6 +1,5 @@
-x = 30
 for i in range(7):
-  t.forward(x)
+  t.forward(side)
   if i % 2 == 0:
     t.right(90)
   else:

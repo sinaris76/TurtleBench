@@ -1,4 +1,3 @@
-from math import sqrt
 def draw_polygon(sides, length):
   outer_turn = 360 / sides 
   for _ in range(sides):
@@ -6,7 +5,8 @@ def draw_polygon(sides, length):
     t.right(outer_turn)
 
 side = 200
-draw_polygon(4, side)
-t.forward(side)
+draw_polygon(4, square_side)
+t.right(45)
+t.forward(square_side * sqrt(2))
 t.right(135)
-t.forward(side * sqrt(2))
+t.forward(square_side)

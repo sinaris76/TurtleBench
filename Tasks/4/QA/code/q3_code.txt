@@ -3,5 +3,5 @@ t.penup()
 for i in range(5):
   if i == 2:
     t.pendown()
-  t.forward(100)
+  t.forward(pentagon_side)
   t.right(72)

@@ -1,27 +1,3 @@
-def draw_polygon(sides, length):
-  outer_turn = 360 / sides 
-  for _ in range(sides):
-    t.forward(length)
-    t.right(outer_turn)
-
-t.circle(100)
-t.penup()
-t.left(90)
-t.forward(160)
-t.left(90)
-t.forward(40)
-t.pendown()
-t.circle(20)
-t.penup()
-t.forward(-80)
-t.pendown()
-t.circle(20)
-t.penup()
-t.forward(40)
-t.left(90)
-t.forward(90)
-t.right(90)
-t.forward(-10)
-t.pendown()
-
-draw_polygon(3, 20)
+for i in range(4):
+  t.right(90)
+  t.circle(semicircle_radius, -180)

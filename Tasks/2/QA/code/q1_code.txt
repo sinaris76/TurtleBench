@@ -1,4 +1,4 @@
 t.setheading(60)
 for i in range(3):
-  t.forward(100)
+  t.forward(triangle_side)
   t.right(120)

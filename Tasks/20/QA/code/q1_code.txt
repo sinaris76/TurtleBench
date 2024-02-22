@@ -2,5 +2,4 @@ def poly(side, angle):
   for i in range(8):
     t.forward(side)
     t.right(angle)
-    
-poly(200, 135)
+poly(star_side, 135)

@@ -5,7 +5,7 @@ def draw_polygon(sides, length):
     t.right(outer_turn)
 
 for i in range(3):
-  t.forward(80)
-  draw_polygon(4, 40)
-  t.forward(-80)
+  t.forward(line_segment)
+  draw_polygon(4, square_side)
+  t.forward(-line_segment)
   t.right(120)

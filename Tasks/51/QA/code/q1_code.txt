@@ -1,0 +1,6 @@
+for i in range(6):
+        t.circle(small_circle_radius)
+        t.right(60)
+
+t.circle(small_circle_radius, 180)
+t.circle(2 * small_circle_radius)

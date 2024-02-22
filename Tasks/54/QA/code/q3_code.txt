@@ -1,0 +1,14 @@
+def draw_polygon(sides, length):
+  outer_turn = 360 / sides 
+  for _ in range(sides):
+    t.forward(length)
+    t.right(outer_turn)
+
+for i in range(6):
+  draw_polygon(6, small_hexagon_side)
+  t.right(60)
+t.up()
+t.forward(2 * small_hexagon_side)
+t.down()
+t.left(90)
+t.circle(2 * small_hexagon_side)

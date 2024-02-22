@@ -1,0 +1,2 @@
+line_segment=80
+square_side=40

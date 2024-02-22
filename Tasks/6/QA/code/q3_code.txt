@@ -4,4 +4,4 @@ def draw_polygon(sides, length):
     t.forward(length)
     t.right(outer_turn)
 t.setheading(60)
-draw_polygon(3, 200)
+draw_polygon(3, triangle_side)

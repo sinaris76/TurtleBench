@@ -1,0 +1,1 @@
+small_square_side=100

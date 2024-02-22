@@ -1,3 +1,3 @@
-t.circle(100)
-t.circle(70)
-t.circle(40)
+t.circle(circles_radi[2])
+t.circle(circles_radi[1])
+t.circle(circles_radi[0])

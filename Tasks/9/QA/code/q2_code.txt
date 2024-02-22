@@ -1,4 +1,4 @@
 t.setheading(180)
-t.circle(70, 180)
+t.circle(semicircle_radius, 180)
 t.left(90)
-t.forward(140)
+t.forward(2 * semicircle_radius)

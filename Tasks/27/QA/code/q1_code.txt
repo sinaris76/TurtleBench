@@ -1,15 +1,9 @@
-import turtle
-from math import sqrt
-t = turtle.Turtle()
-t.speed(0) # 1:slowest, 3:slow, 5:normal, 10:fast, 0:fastest
-t.hideturtle()
-
 def draw_polygon(sides, length):
   outer_turn = 360 / sides 
   for _ in range(sides):
     t.forward(length)
     t.right(outer_turn)
 
-draw_polygon(4, 200)
+draw_polygon(4, square_side)
 t.left(-135)
-t.circle(100 * sqrt(2), -360)
+t.circle(square_side/2 * sqrt(2), -360)

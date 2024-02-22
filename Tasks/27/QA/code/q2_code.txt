@@ -5,10 +5,10 @@ def draw_polygon(sides, length):
     t.right(outer_turn)
 
 for i in range(4):
-  draw_polygon(4, 100)
+  draw_polygon(4, square_side/2)
   t.right(90)
-t.forward(100)
+t.forward(square_side/2)
 t.right(90)
-t.forward(100)
+t.forward(square_side/2)
 t.left(135)
-t.circle(100 * sqrt(2), -360)
+t.circle(square_side/2 * sqrt(2), -360)

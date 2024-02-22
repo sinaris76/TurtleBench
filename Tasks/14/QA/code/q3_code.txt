@@ -5,18 +5,17 @@ def draw_polygon(sides, length):
     t.right(outer_turn)
 
 n_sides = 5
-sides_length = 30
 inner_angle = (n_sides - 2) * 180 / n_sides
 side_turn = 180 - inner_angle
-t.forward(sides_length * 3)
+t.forward(triangle_sides[0])
 t.right(side_turn)
-draw_polygon(n_sides, sides_length * 3)
+draw_polygon(n_sides, triangle_sides[0])
 t.right(90 + inner_angle)
-t.forward(sides_length * 4)
+t.forward(triangle_sides[1])
 t.right(side_turn)
-draw_polygon(n_sides, sides_length * 4)
+draw_polygon(n_sides, triangle_sides[1])
 t.left(180 - inner_angle)
 t.left(180 - atan((0.75)) * 180 / pi)
-t.forward(sides_length * 5)
+t.forward(triangle_sides[2])
 t.right(side_turn)
-draw_polygon(n_sides, sides_length * 5)
+draw_polygon(n_sides, triangle_sides[2])

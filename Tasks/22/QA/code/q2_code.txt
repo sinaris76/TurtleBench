@@ -1,12 +1,12 @@
 for i in range(7):
-  t.forward(30)
+  t.forward(side)
   if i % 2 == 0:
     t.right(90)
   else:
     t.right(-90)
 t.left(90)
 for i in range(7):
-  t.forward(30)
+  t.forward(side)
   if i % 2 == 0:
     t.left(90)
   else:

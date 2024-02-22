@@ -1,0 +1,5 @@
+for j in range(4):
+  t.right(90)
+  for i in range(4):
+    t.forward(square_side / 2)
+    t.right(90)

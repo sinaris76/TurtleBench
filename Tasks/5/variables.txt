@@ -1,0 +1,2 @@
+small_triangle_side = 50
+large_triangle_side = 100

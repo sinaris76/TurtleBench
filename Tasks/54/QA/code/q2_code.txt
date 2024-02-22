@@ -1,0 +1,7 @@
+for i in range(6):
+  for j in range(2):
+    t.forward(small_hexagon_side)
+    t.right(60)
+    t.forward(small_hexagon_side)
+    t.right(120)
+  t.right(60)

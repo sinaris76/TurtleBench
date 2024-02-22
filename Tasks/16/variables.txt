@@ -1,0 +1,1 @@
+smallest_triangle_legs=20
