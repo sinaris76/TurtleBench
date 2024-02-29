@@ -1,0 +1,4 @@
+t.forward(circle_radius * 2)
+t.circle(circle_radius, 180)
+t.forward(circle_radius * 2)
+t.circle(circle_radius, 180)

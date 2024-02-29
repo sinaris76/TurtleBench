@@ -1,0 +1,10 @@
+for i in range(6):
+  t.forward((hexagon_side-2 * semicircle_radius)/2)
+  t.right(90)
+  t.circle(semicircle_radius, -180)
+  t.right(90)
+  t.forward((hexagon_side-2 * semicircle_radius)/2)
+  t.left(120)
+  t.forward(2 * hexagon_side)
+  t.forward(-2 * hexagon_side)
+  t.right(60)

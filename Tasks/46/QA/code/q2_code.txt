@@ -1,0 +1,5 @@
+for i in range(3):
+  t.forward(line_segment)
+  t.circle(circle_radius)
+  t.forward(-line_segment)
+  t.right(120)

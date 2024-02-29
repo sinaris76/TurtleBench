@@ -1,0 +1,2 @@
+hexagon_side=120
+semicircle_radius=30

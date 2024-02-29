@@ -1,0 +1,1 @@
+Give a code in Python turtle that creates the given shape without the square.

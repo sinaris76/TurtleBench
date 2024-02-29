@@ -1,0 +1,1 @@
+small_triangle_side = 50

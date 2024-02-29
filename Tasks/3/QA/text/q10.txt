@@ -1,0 +1,1 @@
+Give a code in Python Turtle that in the given shape connects the midpoints of each side of the square.

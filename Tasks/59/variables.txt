@@ -1,0 +1,2 @@
+largest_square_side = 200
+smallest_square_side = 50

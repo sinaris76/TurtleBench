@@ -1,0 +1,4 @@
+t.setheading(72)
+for i in range(5):
+  t.forward(2 * pentagon_side * cos(pi / 5))
+  t.right(180 - 36)

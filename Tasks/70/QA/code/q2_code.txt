@@ -1,0 +1,11 @@
+def draw_polygon(sides, length):
+  outer_turn = 360 / sides 
+  for _ in range(sides):
+    t.forward(length)
+    t.right(outer_turn)
+
+for j in range(3):
+  t.forward(small_triangle_side)
+  draw_polygon(3, small_triangle_side)
+  t.forward(2 * small_triangle_side)
+  t.left(120)

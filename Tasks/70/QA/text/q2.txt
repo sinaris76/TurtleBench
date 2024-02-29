@@ -1,0 +1,1 @@
+Give a code in Python turtle that creates the given shape but with only the middle triangle on each side of the larger triangle.

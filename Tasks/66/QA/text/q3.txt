@@ -1,0 +1,1 @@
+Give a code in Python turtle that in the given shape, adds a line to each of the four segments around the smaller circle to divide each into two equal segments.

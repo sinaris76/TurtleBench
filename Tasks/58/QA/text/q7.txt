@@ -1,0 +1,1 @@
+Give a code in Python turtle that recreates the given shape and also inserts the horizontal diameter of the right circle.

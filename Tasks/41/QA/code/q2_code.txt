@@ -1,0 +1,7 @@
+for i in range(3):
+  t.forward((triangle_side-semicircle_radius)/2)
+  t.right(90)
+  t.circle(semicircle_radius, 180)
+  t.right(90)
+  t.forward((triangle_side-semicircle_radius)/2)
+  t.left(120)

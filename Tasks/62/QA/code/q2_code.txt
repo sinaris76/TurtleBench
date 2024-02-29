@@ -1,0 +1,8 @@
+t.up()
+t.forward(radius)
+t.down()
+t.circle(radius)
+t.up()
+t.forward((rectangle_length - 2 * radius))
+t.down()
+t.circle(radius)

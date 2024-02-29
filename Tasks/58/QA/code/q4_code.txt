@@ -1,0 +1,10 @@
+for i in range(2):
+  t.forward(circle_radius * 2)
+  t.circle(circle_radius, 450)
+  t.left(90)
+  t.forward(circle_radius * 2)
+  t.left(90)
+  t.circle(circle_radius, 90)
+  t.left(90)
+  t.forward(circle_radius * 2)
+  t.left(90)

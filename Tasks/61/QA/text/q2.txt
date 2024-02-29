@@ -1,0 +1,1 @@
+Give a code in Python turtle that creates the same shape + a line that divides the semicircle into two equal slices.
