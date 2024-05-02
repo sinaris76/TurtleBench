@@ -47,7 +47,7 @@ The structure of the files in the `Tasks` directory is as follows:
 │   └── variables.txt
 │
 ```
-Each directory includes a set of tasks including a base image and queries for different tweak tasks. For consistency of the code provided by the models, the variables needed to create shapes are provided in `variables.txt` file. For instance, for task 1, this file only contains: 
+Each directory includes a set of tasks including a base image and queries for different tweak tasks. For consistency of the code provided by the models, the variables needed to create shapes are provided in the `variables.txt` file. For instance, for task 1, this file only contains: 
 ```
 radius=100
 ```
@@ -55,12 +55,12 @@ A task may or may not include `description.txt`. This file contains a text descr
 
 In each task, `QA/text/q{i}.txt` for $i > 1$ indicates the `i`th tweak task on the base shape. Accordingly, `QA/text/q1.txt` does not include specific queries, it only includes: "create the exact same shape."
 
-You can add new tasks to the benchmark by adding new folders in `Tasks` directory, where `id` indicates the number of the new task. 
+You can add new tasks to the benchmark by adding new folders in the `Tasks` directory, where `id` indicates the number of the new task. 
 
-All tasks are included in `dataset.jsonl` file, which includes all the necessary informations for the evaluation. If you add a new task, you need to run `crawl_tasks.py` file to update the dataset file for the evaluation. 
+All tasks are included in `dataset.jsonl` file, which includes all the necessary information for the evaluation. If you add a new task, you need to run the `crawl_tasks.py` file to update the dataset file for the evaluation. 
 
 ## Prompting
-All the prompts used for the evaulation are available in the `prompts.py` file. You can try new prompts by adding to `system_prompt' dictionary in this file.
+All the prompts used for the evaluation are available in the `prompts.py` file. You can try new prompts by adding to the `system_prompt' dictionary in this file.
 
 ## Evaluation
 by running the following script, you can run an evaluation on the model of your choice (current options: GPT4-V and Gemini 1.0 Pro).
@@ -73,7 +73,7 @@ python eval.py
   --task_mode  # default: code_generation, options: code_generation and code_edit
   --modalities # default: image_only, options: "image_only", "text_only", "image+text", and "image+image".
   --prompting_mode # default: cot, options: cot and basic
-  --save_responses # use this option if you want to save the models' responses in .responses/ directory, if you do not use this argument, it will not store responses
+  --save_responses # Use this option if you want to save the models' responses in the .responses/ directory, if you do not use this argument, it will not store responses
 ```
 
 ## Stay in Touch
