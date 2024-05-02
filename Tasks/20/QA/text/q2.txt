@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape removes the two squares in the middle.
+in the given shape removes the two squares in the middle.

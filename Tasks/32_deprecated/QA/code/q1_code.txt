@@ -1,0 +1,3 @@
+t.circle(radius)
+t.right(180)
+t.circle(radius)

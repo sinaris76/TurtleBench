@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape, replaces semicircles with complete circles to make the shape horizontally and vertically symmetric.
+in the given shape, replaces semicircles with complete circles to make the shape horizontally and vertically symmetric.

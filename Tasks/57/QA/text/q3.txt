@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape fills in the gap between the large triangles with a small triangle.
+in the given shape fills in the gap between the large triangles with a small triangle.

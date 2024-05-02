@@ -1,1 +1,1 @@
-Give a code in Python turtle that recreates the given shape without the smallest circle.
+recreates the given shape without the smallest circle.

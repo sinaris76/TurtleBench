@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape, draws the upper pentagon upside down but keeps the others at the same position and orientation.
+in the given shape, draws the upper pentagon upside down but keeps the others at the same position and orientation.

@@ -1,1 +1,1 @@
-Give a code in Python Turtle that in the given shape, adds four smaller squares to divide the larger square into four equal pieces.
+in the given shape, adds four smaller squares to divide the larger square into four equal pieces.

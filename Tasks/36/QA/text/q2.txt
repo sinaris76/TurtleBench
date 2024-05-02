@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape inserts a circle of an equal size to the smaller circle on the left of the bigger circle to make a vertically symmetrical shape.
+in the given shape inserts a circle of an equal size to the smaller circle on the left of the bigger circle to make a vertically symmetrical shape.

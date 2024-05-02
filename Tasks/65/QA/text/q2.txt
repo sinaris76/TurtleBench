@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape extends each semicircle to a complete circle.
+in the given shape extends each semicircle to a complete circle.

@@ -1,1 +1,1 @@
-square_side=200
+square_side=100

@@ -1,1 +1,1 @@
-Give a code in Python Turtle that removes the squares on the left and the right.
+removes the squares on the left and the right.

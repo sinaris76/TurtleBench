@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape removes the small circles on the left and the right.
+in the given shape removes the small circles on the left and the right.

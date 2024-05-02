@@ -1,0 +1,1 @@
+Four equilateral triangles and a square at the center, where each triangle shares a side with the square and is pointng outward.

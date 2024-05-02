@@ -1,0 +1,1 @@
+Four triangles, which one of them is larger than the others and at the center and three smaller ones each share a vertex with the larger triangle. The larger triangle is pointing upwards. Two sides of each smaller triangle is direct continuation of corresponding sides in the larger triangle.

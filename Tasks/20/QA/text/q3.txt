@@ -1,1 +1,1 @@
-Give a code in Python Turtle that duplicates the given shape and places the new shape next to the existing one.
+duplicates the given shape and places the new shape next to the existing one.

@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape removes the quarter circles on the top and the bottom of the square.
+in the given shape removes the quarter circles on the top and the bottom of the square.

@@ -1,1 +1,1 @@
-Give a code in Python Turtle that creates the given shape without the two sides at the top.
+creates the given shape without the two sides at the top.

@@ -1,1 +1,1 @@
-Give a code in Python Turtle that removes the sides of the pentagon and only draws its diagonals.
+removes the sides of the pentagon and only draws its diagonals.

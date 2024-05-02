@@ -1,1 +1,1 @@
-Give a code in Python Turtle that shifts the squares in the center upward by a distance equal to its side length.
+shifts the squares in the center upward by a distance equal to its side length.

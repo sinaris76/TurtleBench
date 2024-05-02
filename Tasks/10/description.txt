@@ -1,0 +1,1 @@
+A circle inscribed in a square.

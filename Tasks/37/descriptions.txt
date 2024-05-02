@@ -1,0 +1,1 @@
+ a simple line drawing of a semicircle that is intersected by two horizontal lines at its base.

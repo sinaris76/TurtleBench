@@ -1,1 +1,1 @@
-Give a code in Python turtle that creates exactly the same shape.
+creates exactly the same shape.

@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape, adds a new circle that inscribes the squares.
+in the given shape, adds a new circle that circumscribes the squares.

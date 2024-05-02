@@ -1,1 +1,1 @@
-Give a code in Python turtle that removes the bottom side of the given shape.
+removes the bottom side of the given shape.

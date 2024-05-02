@@ -1,1 +1,1 @@
-Give a code in Python turtle that rotates the whole shape 120 degrees to the left.
+rotates the whole shape 120 degrees to the left.

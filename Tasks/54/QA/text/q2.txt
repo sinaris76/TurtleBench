@@ -1,1 +1,1 @@
-Give a code in Python turtle in the given shapes removes the diamonds that have at least one common side with the larger hexagon.
+e given shapes removes the diamonds that have at least one common side with the larger hexagon.

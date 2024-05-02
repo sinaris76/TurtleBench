@@ -4,7 +4,6 @@ def draw_polygon(sides, length):
     t.forward(length)
     t.right(-outer_turn)
 t.forward(2 * small_square_side)
-t.setheading(0)
 for i in range(3):
   t.forward(-small_square_side)
   draw_polygon(4, small_square_side)

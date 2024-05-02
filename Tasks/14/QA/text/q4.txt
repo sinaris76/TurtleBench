@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape, substitutes the squares with regular hexagons that each share a side with the corresponding sides of the right triangles.
+in the given shape, substitutes the squares with regular hexagons that each share a side with the corresponding sides of the right triangles.

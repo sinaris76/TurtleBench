@@ -1,1 +1,1 @@
-Give a code in Python Turtle that creates the given shape without its sides on the left and right.
+creates the given shape without its sides on the left and right.

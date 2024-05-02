@@ -1,1 +1,1 @@
-Give a code in Python turtle that creates the upper semicircle in the given shape.
+creates the upper semicircle in the given shape.

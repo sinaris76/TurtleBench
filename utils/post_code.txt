@@ -1,0 +1,9 @@
+turtle.update()
+wn = turtle.Screen()
+canvas = wn.getcanvas()
+canvas.postscript(file='ps_file.ps', colormode='color')
+# Convert the PostScript file to PNG using ImageMagick
+jpg_file = os.path.join(f"{SAVE_DIR}", f"{task_name}.jpg")
+subprocess.run(['magick', 'ps_file.ps', jpg_file])
+wn.bye()
+#os.remove('ps_file.ps')

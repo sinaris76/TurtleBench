@@ -1,1 +1,1 @@
-Give a code in Python Turtle that creates the given shape + its diagonals.
+creates the given shape + its diagonals.

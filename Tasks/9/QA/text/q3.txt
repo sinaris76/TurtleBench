@@ -1,1 +1,1 @@
-Give a code in Python Turtle that adds two semicircles to the existing semicircles to make them a complete circle.
+adds two semicircles to the existing semicircles to make them a complete circle.

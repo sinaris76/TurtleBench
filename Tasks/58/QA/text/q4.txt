@@ -1,1 +1,1 @@
-Give a code in Python turtle that recreates the given shape and also inserts the horizontal and vertical diameters of each circle.
+recreates the given shape and also inserts the horizontal and vertical diameters of each circle.

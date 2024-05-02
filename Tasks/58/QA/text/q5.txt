@@ -1,1 +1,1 @@
-Give a code in Python turtle that recreates the given shape without the left semicircle of the right circle and the right semicircle of the left circle.
+recreates the given shape without the left semicircle of the right circle and the right semicircle of the left circle.

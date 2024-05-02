@@ -1,1 +1,1 @@
-Give a code in Python Turtle that removes the bottom side of the shape and substitutes it with a semicircle its diameter equals a side of the square and its curved edge is at the top.
+removes the bottom side of the shape and substitutes it with a semicircle its diameter equals a side of the square and its curved edge is at the top.

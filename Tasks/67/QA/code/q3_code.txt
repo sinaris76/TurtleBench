@@ -1,4 +1,3 @@
-semicircle_radius = 50
 for i in range(4):
   t.circle(semicircle_radius, -180)
   t.left(90)

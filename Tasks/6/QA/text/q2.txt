@@ -1,1 +1,1 @@
-Give a code in Python turtle that fills the gap between the triangles in the given shape with a new triangle by adding only a new line to the shape.
+fills the gap between the triangles in the given shape with a new triangle by adding only a new line to the shape.

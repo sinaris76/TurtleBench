@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape removes all the right isosceles triangles.
+in the given shape removes all the right isosceles triangles.

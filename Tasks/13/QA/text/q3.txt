@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape, slices the circle into 6 equal pieces.
+in the given shape, slices the circle into 6 equal pieces.

@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape inserts the smaller circle on top of the larger circle.
+in the given shape inserts the smaller circle on top of the larger circle.

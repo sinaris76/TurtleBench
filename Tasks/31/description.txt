@@ -1,0 +1,1 @@
+two squares connected at one corner. The square on the top left is aligned with the bottom right square such that one of its sides continues as one side of the other square

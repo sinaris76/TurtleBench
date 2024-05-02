@@ -1,3 +1,5 @@
 t.circle(radius)
 t.right(180)
 t.circle(radius)
+t.right(90)
+t.forward(2 * radius)

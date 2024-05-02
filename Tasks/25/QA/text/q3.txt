@@ -1,1 +1,1 @@
-Give a code in Python turtle that in the given shape draws a circle that the base line of the triangles is its diameter.
+in the given shape draws a circle that the base line of the triangles is its diameter.

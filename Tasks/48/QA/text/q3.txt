@@ -1,1 +1,1 @@
-Give a code in Python turtle that creates the same shape and also inserts the diagonal of the largest square from top left to bottom right.
+creates the same shape and also inserts the diagonal of the largest square from top left to bottom right.

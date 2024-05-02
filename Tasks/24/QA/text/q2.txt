@@ -1,1 +1,1 @@
-Give a code in Python turtle that adds two triangles to the right of the existing shape to make it vertically symmetrical.
+adds two triangles to the right of the existing shape to make it vertically symmetrical.

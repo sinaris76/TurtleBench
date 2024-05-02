@@ -1,1 +1,1 @@
-Give a code in Python Turtle that creates the given shape with one of the triangles removed.
+creates the given shape with one of the triangles removed.

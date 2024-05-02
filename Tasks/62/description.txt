@@ -1,0 +1,1 @@
+Two circles interstecting at two points which makes a shared area between them. The circles are inscribed by a horizontal rectangle.
