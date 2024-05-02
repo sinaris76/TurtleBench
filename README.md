@@ -59,10 +59,29 @@ You can add new tasks to the benchmark by adding new folders in the `Tasks` dire
 
 All tasks are included in `dataset.jsonl` file, which includes all the necessary information for the evaluation. If you add a new task, you need to run the `crawl_tasks.py` file to update the dataset file for the evaluation. 
 
+## Evaluation Results
+| Task | GPT-4V basic | Gemini basic | GPT-4V 0-S CoT | Gemini 0-S CoT |
+|------|--------------|--------------|----------------|----------------|
+| **Scratch Code Generation** | | | | |
+| Image only | 16% | 8% | 19% | 10% |
+| **Tweak Code Generation** | | | | |
+| Image + Text | 10% | 2% | 12% | 3% |
+| **Tweak Code Edit** | | | | |
+| Image + Text | 18% | 12% | 20% | 14% |
+| Image + Image | 12% | 3% | 16% | 3% |
+
+| Task | GPT-4V basic | Gemini basic | GPT-4V CoT | Gemini CoT |
+|------|--------------|--------------|------------|------------|
+| **Scratch Code Generation** | | | | |
+| Image only Input | 26% | 15% | 29% | 17% |
+| Text only Input | 37% | 19% | 38% | 21% |
+| Image and Text Input | 38% | 19% | 40% | 21% |
+
+
 ## Prompting
 All the prompts used for the evaluation are available in the `prompts.py` file. You can try new prompts by adding to the `system_prompt' dictionary in this file.
 
-## Evaluation
+## How to Run
 by running the following script, you can run an evaluation on the model of your choice (current options: GPT4-V and Gemini 1.0 Pro).
 It runs the model on the part of benchmark (based on the `task_type` and `task_mode` variables) and reports the accuracy of the model.
 
@@ -75,6 +94,22 @@ python eval.py
   --prompting_mode # default: cot, options: cot and basic
   --save_responses # Use this option if you want to save the models' responses in the .responses/ directory, if you do not use this argument, it will not store responses
 ```
+## 📈 Examples
+
+
+<img src="figs/ex1.png" style="zoom:80%;" />
+
+
+<details>
+<summary>Click to expand/collapse the examples.</summary>
+<img src="figs/ex2.png" style="zoom:80%;" />
+</details>
+
+<details>
+<summary>Click to expand/collapse the examples.</summary>
+<img src="figs/ex3.png" style="zoom:80%;" />
+</details>
+
 
 ## Stay in Touch
 Feel free to open merge requests for enhancing TurtleBench.
