@@ -81,4 +81,4 @@ Feel free to open merge requests for enhancing TurtleBench.
 For any questions, comments and discussions please reach out to me at [srismanc@uci.edu](mailto:srismanc@uci.edu)
 
 ## Contributors
-This work is done by: [Sina Rismahchian](mailto:srismanc@uci.edu), [Yasaman Razeghi](https://yasamanrazeghi.com/), [Sameer Singh](https://sameersingh.org/), [Shayan Doroudi](https://sites.google.com/uci.edu/shayan-doroudi) at University of California, Irvine
+This work is done by: [Sina Rismanchian](mailto:srismanc@uci.edu), [Yasaman Razeghi](https://yasamanrazeghi.com/), [Sameer Singh](https://sameersingh.org/), [Shayan Doroudi](https://sites.google.com/uci.edu/shayan-doroudi) at University of California, Irvine
