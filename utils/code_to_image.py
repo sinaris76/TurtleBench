@@ -9,7 +9,7 @@ def code_to_image(piece_of_code, task_name, save_path):
     clean_code = insert_pensize_and_hideturtle(piece_of_code)
   except Exception as e:
     print(e, task_name)
-
+    clean_code = ""
   try:
     svn = find_screen_variable_name(clean_code)
   except:

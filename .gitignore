@@ -1,5 +1,5 @@
 .env
-.venv
+.myenv
 **/.DS_Store
 ._.DS_Store
 **/._.DS_Store

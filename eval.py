@@ -1,6 +1,5 @@
 import json
 import os
-import tempfile
 import argparse
 
 import datetime
@@ -86,18 +85,19 @@ prompting_mode='cot', code_framework='turtle', save_responses=False):
   elif model_name == 'gemini':
     api_key = os.getenv('GOOGLE_API_KEY')
     model = GeminiModel(api_key=api_key)
+  run_name = '_'.join([model_name, task_type, task_mode, modalities, 
+  prompting_mode, datetime.datetime.now().strftime("%d-%m_%H:%M")])
   
-  global temp_manager
-  temp_manager = TempDirManager()
   if save_responses:
-    responses_path = '.responses/' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M") + '_' + model_name
+    responses_path = '.responses/' + run_name
     os.makedirs(responses_path)
-    images_path = responses_path + "_Images"
+    images_path = responses_path + "_images/"
     os.makedirs(images_path)
   else:
-    responses_path_name = datetime.datetime.now().strftime("%Y-%m-%d %H:%M") + '_' + model_name
-    responses_path = temp_manager.create_subfolder(responses_path_name)
-    images_path = temp_manager.create_subfolder(responses_path_name + "_Images")
+    global temp_manager
+    temp_manager = TempDirManager()
+    responses_path = temp_manager.create_subfolder(run_name)
+    images_path = temp_manager.create_subfolder(run_name + "_images")
   
   solved_counter = 0
   pbar = tqdm(total=len(subset), desc="Processing tasks")
@@ -139,6 +139,7 @@ prompting_mode='cot', code_framework='turtle', save_responses=False):
   pbar.close()
   temp_manager.close_temp_directory()
 
+  
   print(f'Accuracy: {solved_counter * 100 / len(subset):.2f}%, Solved {solved_counter} from {len(subset)}')
 
 # eval(model_name='gemini', task_type='tweak', task_mode='code_generation', modalities='image+text', save_responses=True)
@@ -170,3 +171,4 @@ if __name__ == "__main__":
     eval(model_name=args.model_name, task_type=args.task_type, task_mode=args.task_mode, 
          modalities=args.modalities, prompting_mode=args.prompting_mode, code_framework=args.code_framework, 
          save_responses=args.save_responses)
+
