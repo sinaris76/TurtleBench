@@ -4,37 +4,11 @@ import matplotlib.pyplot as plt
 import os
 
 def find_bounding_rect(image):
-    # Convert to grayscale
-    
 
-    # Apply thresholding
     _, thresh = cv2.threshold(image, 200, 255, cv2.THRESH_BINARY)
-
-    # Find the coordinates of non-zero points
     points = np.column_stack(np.where(thresh.transpose() == 0))
-
-    # Compute the bounding rectangle
     x, y, w, h = cv2.boundingRect(points)
-
-# Draw rectangle on the image (for visualization)
     return x, y, w, h
-
-
-
-def plot_contour(original_image, contour, name):
-  height, width = original_image.shape[:2]
-  blank_image = np.zeros((height, width, 3), np.uint8)
-
-# Draw the contour on the blank image
-# -1 in the third argument indicates drawing all contours
-# (255, 255, 255) is color (white in this case), and 2 is the thickness
-  cv2.drawContours(blank_image, [contour], -1, (255, 255, 255), 2)
-
-# Now use plt.imshow to display the image
-  plt.imshow(cv2.cvtColor(blank_image, cv2.COLOR_BGR2RGB))
-  plt.savefig(f'aacontour_{name}.png')
-
-
 
 def resize_to_match(image1, image2):
     _, thresholded1 = cv2.threshold(image1, 200, 255, cv2.THRESH_BINARY_INV)
@@ -62,9 +36,9 @@ def compare_shapes(shape1, shape2):
 
 
 def calculate_accuracy(task_name, source_path, response_path):
-  image_path_source = source_path + '/' + task_name + '.jpg'
-  image_path_response = response_path + '/' + task_name + '.jpg'
-  print(image_path_response, image_path_source)
+  image_path_source = os.path.join(source_path, task_name+'.jpg')
+  image_path_response = os.path.join(response_path, task_name + '.jpg')
+
   assert os.path.exists(image_path_source) and os.path.exists(image_path_response)
 
 

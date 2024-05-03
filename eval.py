@@ -5,6 +5,7 @@ import argparse
 import datetime
 
 from tqdm import tqdm
+from calculate_score import update_report
 
 from models.gemini import GeminiModel
 from models.gpt import GPTModel
@@ -85,9 +86,10 @@ prompting_mode='cot', code_framework='turtle', save_responses=False):
   elif model_name == 'gemini':
     api_key = os.getenv('GOOGLE_API_KEY')
     model = GeminiModel(api_key=api_key)
-  run_name = '_'.join([model_name, task_type, task_mode, modalities, 
-  prompting_mode, datetime.datetime.now().strftime("%d-%m_%H:%M")])
-  
+  time = datetime.datetime.now().strftime("%d-%m_%H:%M")
+  run_name = '|'.join([model_name, task_type, task_mode, modalities, 
+  prompting_mode, time])
+
   if save_responses:
     responses_path = '.responses/' + run_name
     os.makedirs(responses_path)
@@ -101,14 +103,21 @@ prompting_mode='cot', code_framework='turtle', save_responses=False):
   
   solved_counter = 0
   pbar = tqdm(total=len(subset), desc="Processing tasks")
+  run_settings = {
+    "model_name": model_name,
+    "task_type": task_type,
+    "task_mode": task_mode,
+    "modalities": modalities,
+    "prompting_mode": prompting_mode,
+    "time": time
+  }
+  update_report(run_setting=run_settings.copy(), accuracy=None, solved_counter=None)
+  prompt_settings = {key: value for key, value in run_settings.items() if key not in ['time', 'model_name']}
 
   for task in subset:
     system_prompt, user_prompt, image1, image2 = construct_prompts(
       task=task,
-      task_type=task_type,
-      task_mode=task_mode,
-      modalities=modalities,
-      prompting_mode=prompting_mode
+      **prompt_settings
     )
     task_name = str(task['id']) + '_' + str(task['question_number'])
     if model_name == 'gemini':
@@ -123,7 +132,7 @@ prompting_mode='cot', code_framework='turtle', save_responses=False):
       print(f"Task {task_name} unsuccessful")
       print(e)
     finally:
-      with open(responses_path + '/' + task_name + '.txt', 'w') as f:
+      with open(os.path.join(responses_path, task_name + '.txt'), 'w') as f:
         f.write(response)
 
     code_to_image(response_piece_of_code, task_name, save_path=images_path)
@@ -134,37 +143,33 @@ prompting_mode='cot', code_framework='turtle', save_responses=False):
     
     current_accuracy = (solved_counter / (pbar.n + 1)) * 100
     pbar.set_postfix(accuracy=f"{current_accuracy:.2f}%")
-    pbar.update(1)  
+    pbar.update(1)
 
   pbar.close()
-  temp_manager.close_temp_directory()
+  if not save_responses:
+    temp_manager.close_temp_directory()
 
-  
+  update_report(run_settings, solved_counter, current_accuracy)
   print(f'Accuracy: {solved_counter * 100 / len(subset):.2f}%, Solved {solved_counter} from {len(subset)}')
-
-# eval(model_name='gemini', task_type='tweak', task_mode='code_generation', modalities='image+text', save_responses=True)
-
-
-
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run evaluation on different models and tasks.")
     
     parser.add_argument('--model_name', type=str, default='gemini', 
-                        help='The model name to use. Options are "gpt4-v" and "gemini". Default is "gemini".')
+          help='The model name to use. Options are "gpt4-v" and "gemini". Default is "gemini".')
     parser.add_argument('--task_type', type=str, default='scratch', 
-                        help='Type of task to perform. Options are "scratch" or "tweak". Default is "scratch".')
+          help='Type of task to perform. Options are "scratch" or "tweak". Default is "scratch".')
     parser.add_argument('--task_mode', type=str, default='code_generation', 
-                        help='Mode of the task. Options are "code_generation" and "code_edit". Default is "code_generation".')
+          help='Mode of the task. Options are "code_generation" and "code_edit". Default is "code_generation".')
     parser.add_argument('--modalities', type=str, default='image_only', 
-                        help='Modalities to use. Options are "image_only", "text_only", "image+text", and "image+image". Default is "image_only".')
+          help='Modalities to use. Options are "image_only", "text_only", "image+text", and "image+image". Default is "image_only".')
     parser.add_argument('--prompting_mode', type=str, default='cot', 
-                        help='Prompting mode to use. Options are "cot" and "basic". Default is "cot".')
+          help='Prompting mode to use. Options are "cot" and "basic". Default is "cot".')
     parser.add_argument('--code_framework', type=str, default='turtle', 
-                        help='Framework for code generation. Default is "turtle".')
+          help='Framework for code generation. Default is "turtle".')
     parser.add_argument('--save_responses', action='store_true', 
-                        help='Save the responses to files. Does not save by default.')
+          help='Save the responses to files. Does not save by default.')
 
     args = parser.parse_args()
     

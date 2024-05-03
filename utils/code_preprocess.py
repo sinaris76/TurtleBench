@@ -1,3 +1,5 @@
+import re
+
 def truncate_code(s):
     first = s.find('```')
     if first != -1:
@@ -15,6 +17,7 @@ def preprocess_response(response):
     clean_code = truncated.replace('`', '').replace('python', '', 1).\
       replace('Python', '', 1).replace('turtle.done()', '').replace('t.done()', '')\
       .replace('.mainloop()', '').replace('.exitonclick()', '').strip()
+    clean_code = re.sub('\.pensize\(\d\)', '', clean_code)
   else:
     return None
   return clean_code
