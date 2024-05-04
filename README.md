@@ -81,9 +81,9 @@ All tasks are included in `dataset.jsonl` file, which includes all the necessary
 ## Prompting
 All the prompts used for the evaluation are available in the `prompts.py` file. You can try new prompts by adding to the `system_prompt' dictionary in this file.
 
-## How to Run
+## How to Run Evaluation
 by running the following script, you can run an evaluation on the model of your choice (current options: GPT4-V and Gemini 1.0 Pro).
-It runs the model on the part of benchmark (based on the `task_type` and `task_mode` variables) and reports the accuracy of the model.
+It runs the model on a part of benchmark (based on the `task_type` and `task_mode` variables) and reports the accuracy of the model in the file `reports/report.csv`. 
 
 ```
 python eval.py 
@@ -94,6 +94,13 @@ python eval.py
   --prompting_mode # default: cot, options: cot and basic
   --save_responses # Use this option if you want to save the models' responses in the .responses/ directory, if you do not use this argument, it will not store responses
 ```
+
+If your evaluation was has not been completed due to some reasons, you can run evaluation based on the responses that have been gathered before the termination by: 
+```
+python calculate_score.py <responses path>
+```
+It will run the codes and update the results in the reports file. 
+
 ## 📈 Examples
 
 
@@ -109,6 +116,7 @@ python eval.py
 <summary>Click to expand/collapse the examples.</summary>
 <img src="figs/ex3.png" style="zoom:80%;" />
 </details>
+
 
 
 ## Stay in Touch
