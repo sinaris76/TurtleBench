@@ -1,0 +1,9 @@
+t.right(270)
+def draw_polygon(sides, length):
+  outer_turn = 360 / sides 
+  for _ in range(sides):
+    t.forward(length)
+    t.right(outer_turn)
+
+for i in range(4):
+  draw_polygon(4, squares_sides[i])

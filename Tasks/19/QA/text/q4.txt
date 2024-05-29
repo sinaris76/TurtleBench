@@ -1,1 +1,1 @@
-in the given shape, draws the upper pentagon upside down but keeps the others at the same position and orientation.
+in the given shape, rotates the upper pentagon by 180 degrees to the left around its bottom vertex but keeps the others at the same position and orientation.

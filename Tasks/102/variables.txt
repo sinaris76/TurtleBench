@@ -1,0 +1,2 @@
+square_side=150
+triangle_side=100

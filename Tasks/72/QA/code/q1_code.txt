@@ -1,0 +1,8 @@
+t.circle(radius)
+t.circle(radius, 90)
+t.left(90)
+t.forward(2 * radius)
+t.left(90)
+t.circle(radius, 90)
+t.left(90)
+t.forward(2 * radius)

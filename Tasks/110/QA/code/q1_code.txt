@@ -1,0 +1,5 @@
+t.left(90)
+for i in range(3):
+  t.circle(semicircle_radius, 360)
+  t.circle(semicircle_radius, -180)
+  t.left(60)

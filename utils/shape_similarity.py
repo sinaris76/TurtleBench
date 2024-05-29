@@ -49,9 +49,10 @@ def calculate_accuracy(task_name, source_path, response_path):
     shape2_2, shape1_2 = resize_to_match(image2, image1)
   except:
     print('Error for', task_name)
+    return False
 
   similarity_score = max(compare_shapes(shape1_1, shape2_1), compare_shapes(shape2_2, shape1_2))
   if similarity_score > 0.9:
     return True
   else:
-    return None
+    return False

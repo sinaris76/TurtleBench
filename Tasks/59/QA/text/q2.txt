@@ -1,1 +1,1 @@
-in the given shape, connects the midpoints of each side of the largest square.
+in the given shape, connects the midpoints of each side of the largest square to the midpoints of adjacent sides.

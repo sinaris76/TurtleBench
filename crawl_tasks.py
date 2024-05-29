@@ -1,10 +1,10 @@
 import os
 import re
 import json
-from generate_source_images import generate_image
-from shape_sim import find_contour, preprocess_image
+from utils.generate_source_images import generate_image
+from utils.contours import find_contour, preprocess_image
 
-tasks =  os.listdir('Tasks')
+tasks = os.listdir('Tasks')
 numeric_tasks = [item for item in tasks if item.isdigit()]
 tasks = sorted(numeric_tasks, key=lambda x: int(x))
 print(tasks)
@@ -74,11 +74,11 @@ def create_jsonl_from_folders(folder_path, generate_source_images):
                     "id": int(task),
                     "question_number": question_number,
                     "query": text_content,
-                    "base_shape": image_path,
+                    "base_shape": f'autotest/source/{task}_1.jpg',
                     "result_shape": result_shape_path,
                     "variables": variables_text,
                     "base_shape_code": code,
-                    # "source_contours": find_contour(preprocess_image(f'autotest/source/source_{task}_1.jpg'))[1],
+                    "source_contours": find_contour(preprocess_image(f'autotest/source/{task}_1.jpg'))[1],
                     "description": description 
                 }
                 # Writing the JSON object to the JSONL file
@@ -86,4 +86,4 @@ def create_jsonl_from_folders(folder_path, generate_source_images):
 
 
 # Calling the function and passing the path of the extracted folder
-create_jsonl_from_folders('Tasks', generate_source_images = False)
+create_jsonl_from_folders('Tasks', generate_source_images = True)

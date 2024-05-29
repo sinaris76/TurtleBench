@@ -10,10 +10,12 @@ def code_to_image(piece_of_code, task_name, save_path):
   except Exception as e:
     print(e, task_name)
     clean_code = ""
+    return False
   try:
     svn = find_screen_variable_name(clean_code)
   except:
     print("error on code:", f'{task_name}.txt')
+    return False
   code = execute_combined_code(clean_code, screen_variable_name=svn, task_name=task_name, save_path=save_path)
   file_path = f'file_path_{task_name}.py'
   with open(file_path, 'w') as file:
@@ -21,5 +23,7 @@ def code_to_image(piece_of_code, task_name, save_path):
   completed_process = subprocess.run(['python', file_path])
   if completed_process.returncode == 0:
     os.remove(file_path)
+    return True
   else:
     print("Process failed, return code:", completed_process.returncode)
+    return False

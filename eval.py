@@ -6,6 +6,7 @@ import datetime
 
 from tqdm import tqdm
 from calculate_score import update_report
+from models.cogvlm import CogVLMModel
 
 from models.gemini import GeminiModel
 from models.gpt import GPTModel
@@ -86,6 +87,9 @@ prompting_mode='cot', code_framework='turtle', save_responses=False):
   elif model_name == 'gemini':
     api_key = os.getenv('GOOGLE_API_KEY')
     model = GeminiModel(api_key=api_key)
+  elif model_name == 'cogvlm':
+    api_key = os.getenv('REPLICATE_API_TOKEN')
+    model = CogVLMModel(api_key=api_key)
   time = datetime.datetime.now().strftime("%d-%m_%H:%M")
   run_name = '|'.join([model_name, task_type, task_mode, modalities, 
   prompting_mode, time])
@@ -125,6 +129,9 @@ prompting_mode='cot', code_framework='turtle', save_responses=False):
       response = model.get_response(text_input=text_input, base_image=image1, result_image=image2)
     elif model_name=='gpt4-v':
       response = model.get_response(system_message=system_prompt, user_message=user_prompt, base_image=image1, result_image=image2)
+    elif model_name=='cogvlm':
+      text_input = system_prompt + '\n' * 3 + user_prompt
+      response = model.get_response(text_input=text_input, base_image=image1)
     try:
       assert response != None
       response_piece_of_code = preprocess_response(response)
@@ -135,11 +142,11 @@ prompting_mode='cot', code_framework='turtle', save_responses=False):
       with open(os.path.join(responses_path, task_name + '.txt'), 'w') as f:
         f.write(response)
 
-    code_to_image(response_piece_of_code, task_name, save_path=images_path)
-    
-    solved = calculate_accuracy(task_name, source_path='autotest/source', response_path=images_path)
-    if solved:
-      solved_counter += 1
+    code_runnable = code_to_image(response_piece_of_code, task_name, save_path=images_path)
+    if code_runnable:
+      solved = calculate_accuracy(task_name, source_path='autotest/source', response_path=images_path)
+      if solved:
+        solved_counter += 1
     
     current_accuracy = (solved_counter / (pbar.n + 1)) * 100
     pbar.set_postfix(accuracy=f"{current_accuracy:.2f}%")

@@ -1,0 +1,11 @@
+for i in range(3):
+  t.forward(radius)
+  t.right(180)
+  t.forward(2 * radius)
+  t.right(180)
+  t.forward(radius)
+  t.right(60)
+
+t.forward(radius)
+t.right(270)
+t.circle(radius)

@@ -1,1 +1,1 @@
-creates the given shape but with the left triangle upside down.
+creates the given shape but with the left triangle upside down while keeping its base fixed.

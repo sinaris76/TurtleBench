@@ -1,1 +1,1 @@
-duplicates the given shape and places the new shape next to the existing one.
+duplicates the given shape and places the new shape adjacent to the existing one where a pair of corresponding vertices from each star touches one another.

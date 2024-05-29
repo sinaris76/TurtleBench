@@ -1,0 +1,10 @@
+for i in range(8):
+  t.circle(large_circle_radius, 45)
+  t.left(90)
+  t.forward(large_circle_radius - small_circle_radius)
+  t.forward(-(large_circle_radius - small_circle_radius))
+  t.right(90)
+t.left(90)
+t.forward(large_circle_radius - small_circle_radius)
+t.right(90)
+t.circle(small_circle_radius)

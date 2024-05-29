@@ -1,1 +1,1 @@
-in the given shape replaces the larger triangle with a square of the same side length.
+in the given shape replaces the larger triangle with a square of the same side length while extending the pattern of smaller triangles to the square.

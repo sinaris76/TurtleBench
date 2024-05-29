@@ -1,0 +1,2 @@
+large_circle_radius = 100
+small_circle_radius = 40

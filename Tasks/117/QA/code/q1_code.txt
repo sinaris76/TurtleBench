@@ -1,0 +1,19 @@
+def draw_square_and_diagonals(sides, length):
+  outer_turn = 360 / sides 
+  for _ in range(sides):
+    t.forward(length)
+    t.right(outer_turn)
+  t.right(45)
+  t.forward(length * sqrt(2))
+  t.right(135)
+  t.forward(length)
+  t.right(135)
+  t.forward(length * sqrt(2))
+  t.right(45)
+  t.forward(-length)
+
+  
+x = 4
+for i in range(x):
+  draw_square_and_diagonals(4, small_square_side)
+  t.right(360 / x)

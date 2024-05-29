@@ -1,0 +1,1 @@
+largest_square_side=200

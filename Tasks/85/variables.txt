@@ -1,0 +1,1 @@
+triangle_sides=[90, 120, 150]

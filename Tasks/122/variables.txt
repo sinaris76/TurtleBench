@@ -1,0 +1,1 @@
+small_diamond_side=100

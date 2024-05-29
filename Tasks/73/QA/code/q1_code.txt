@@ -1,0 +1,9 @@
+t.setheading(60)
+for i in range(3):
+  t.forward(largest_triangle_side)
+  t.right(120)
+t.forward(largest_triangle_side / 2)
+t.right(60)
+for i in range(3):
+  t.forward(largest_triangle_side / 2)
+  t.right(120)

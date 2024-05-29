@@ -1,1 +1,1 @@
-creates adds two squares to the existing shape to make it horizontally and vertically symmetrical.
+adds two squares to the existing shape to make it horizontally and vertically symmetrical.

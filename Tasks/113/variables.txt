@@ -1,0 +1,2 @@
+square_side=200
+semicircle_radius=40
