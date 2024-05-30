@@ -1,1 +1,1 @@
-in the given shape inserts the smaller circle on top of the larger circle.
+in the given shape the smaller circle is moved to be on top of the larger circle such that the vertical diameters of the circles align.
