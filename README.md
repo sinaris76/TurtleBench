@@ -15,7 +15,8 @@ Code for the paper [TurtleBench: A Visual Programming Benchmark in Turtle Geomet
 </p>
 
 ## About TurtleBench
-There has been a surge of interest in leveraging Large Multimodal Models (LMMs) for code generation, with the ambitious goal of creating a fully automated AI software engineer. A critical and useful skill required for such an AI is the ability to translate visual contexts into executable code. Yet, despite the remarkable successes of LMMs in diverse domains, their ability to do such tasks has not been systematically studied. To address this gap, we introduce TurtleBench, a manually crafted benchmark designed specifically to evaluate the capacity of LMMs to interpret example images of the desired output, textual instructions, or a combination of both and apply this understanding to generate code as the output. This evaluation task is grounded in turtle geometry, a graphical mode of programming that is widely used as an educational tool for children. Successfully completing tasks in TurtleBench demands a combination of skills: visual comprehen- sion to understand the input as an image, logical reasoning to decipher the task, geometric reasoning to understand relations between shapes, and programming skills to precisely replicate the input through code. Using TurtleBench, we conduct a thorough quantitative evaluation of leading foundational models, and show that they heavily struggle to solve our tasks with the top performer model (GPT4-V) only achieving an overall accuracy of 19% in the simplest subset of TurtleBench. Our findings reveal that models show a substantial 44% improvement when given textual instructions over image inputs, underscoring their difficulty in comprehending simple geometric shapes. However, even in textual mode, LMMs continue to fall short of accomplishing the task. TurtleBench stands as one of the few benchmarks to evaluate the integration of visual understanding and code generation capabilities in LMMs, setting the stage for future research.
+Humans have the ability to reason about geometric patterns in images and scenes from a young age. However, developing large multimodal models (LMMs) capable of similar reasoning remains a challenge, highlighting the need for robust evaluation methods to assess these capabilities. We introduce TurtleBench, a benchmark designed to evaluate LMMs' capacity to interpret geometric patterns---given visual examples, textual instructions, or both---and generate precise code outputs. Inspired by turtle geometry, a notion used to teach children foundational coding and geometric concepts, TurtleBench features tasks with patterned shapes that have underlying algorithmic logic. Our evaluation reveals that leading LMMs struggle significantly with these tasks, with GPT-4V achieving only 19% accuracy on the simplest tasks and few-shot prompting only marginally improves their performance (<2%). TurtleBench highlights the gap between human and AI performance in intuitive and visual geometrical understanding, setting the stage for future research in this area and stands as one of the few benchmarks to evaluate the integration of visual understanding and code generation capabilities in LMMs, setting the stage for future research.
+
 
 
 ![photo](figs/intro.png)
@@ -60,15 +61,16 @@ You can add new tasks to the benchmark by adding new folders in the `Tasks` dire
 All tasks are included in `dataset.jsonl` file, which includes all the necessary information for the evaluation. If you add a new task, you need to run the `crawl_tasks.py` file to update the dataset file for the evaluation. 
 
 ## Evaluation Results
-| Task | GPT-4V basic | Gemini basic | GPT-4V 0-S CoT | Gemini 0-S CoT |
-|------|--------------|--------------|----------------|----------------|
-| **Scratch Code Generation** | | | | |
-| Image only | 16% | 8% | 19% | 10% |
-| **Tweak Code Generation** | | | | |
-| Image + Text | 10% | 2% | 12% | 3% |
-| **Tweak Code Edit** | | | | |
-| Image + Text | 18% | 12% | 20% | 14% |
-| Image + Image | 12% | 3% | 16% | 3% |
+| Task Type / Modalities | Scratch T | Scratch I | Scratch I + T | Tweak T | Tweak I | Tweak I + T | Tweak CG I + T | Tweak CG I + I | Runnable |
+|------------------------|-----------|-----------|---------------|---------|---------|-------------|----------------|----------------|----------|
+| GPT-4o/basic           | 37.04     | 16.03     | **37.98**     | 17.69   | 18.12   | 12.06       | 99.21          |
+| GPT-4o/CoT             | 38.12     | 19.23     | **40.18**     | 20.00   | 19.61   | 13.84       | 99.85          |
+| GPT-4o/4-S             | NA        | 21.49     | NA            | NA      | NA      | NA          | 99.85          |
+| Gemini/basic           | **25.09** | 7.71      | 22.22         | 3.85    | 12.00   | 3.00        | 99.13          |
+| Gemini/CoT             | 18.51     | 9.20      | **20.52**     | 7.10    | 23.08   | 11.84       | 99.94          |
+| Gemini/4-S             | NA        | 10.18     | NA            | NA      | NA      | NA          | 99.92          |
+| Llava/basic            | **6.01**  | 0.82      | 0.03          | 1.09    | 0.03    | 0.03        | 69.13          |
+| Llava/CoT              | **6.22**  | 0.98      | 1.02          | 0.92    | 1.09    | 1.02        | 72.34          |
 
 | Task | GPT-4V basic | Gemini basic | GPT-4V CoT | Gemini CoT |
 |------|--------------|--------------|------------|------------|
@@ -87,11 +89,11 @@ It runs the model on a part of benchmark (based on the `task_type` and `task_mod
 
 ```
 python eval.py 
-  --model_name # default: gemini, options: gemini and gpt4-v
+  --model_name # default: gemini, options: gemini (1.5 flash), gpt (4o), and llava (13B)
   --task_type  # default: scratch, options: scratch and tweak
   --task_mode  # default: code_generation, options: code_generation and code_edit
   --modalities # default: image_only, options: "image_only", "text_only", "image+text", and "image+image".
-  --prompting_mode # default: cot, options: cot and basic
+  --prompting_mode # default: cot, options: cot, basic and few-shot (only for Scratch Code Generation)
   --save_responses # Use this option if you want to save the models' responses in the .responses/ directory, if you do not use this argument, it will not store responses
 ```
 

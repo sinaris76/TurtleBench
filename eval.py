@@ -6,7 +6,7 @@ import datetime
 
 from tqdm import tqdm
 from calculate_score import update_report
-from models.cogvlm import CogVLMModel
+from models.llava import LlavaModel
 
 from models.gemini import GeminiModel
 from models.gpt import GPTModel
@@ -20,6 +20,8 @@ from utils.watermark import watermark_and_save
 from utils.code_preprocess import preprocess_response
 
 from dotenv import load_dotenv
+
+import random
 
 def construct_prompts(task, task_type, prompting_mode, modalities, task_mode):
   assert task_type=='scratch' or task_type=='tweak'
@@ -51,9 +53,37 @@ def construct_prompts(task, task_type, prompting_mode, modalities, task_mode):
     image1 = watermark_and_save(task['base_shape'], watermarekd_path, '1')
     image2 = watermark_and_save(task['result_shape'], watermarekd_path, '2')
   
-  return system_prompt, user_prompt, image1, image2
+  return system_prompt, user_prompt, image1, image2 if modalities == "image+image" else None
     
+
+def construct_prompts_few_shot(task, subset):
+  system_prompt = system_prompts['few-shot']['scratch']['image_only']
+  # pick 4 numbers from 1 to 70 except for the task  
+  pop = list(range(1, 71))
+  if int(task['id']) in pop:
+    pop.remove(int(task['id']))
+  numbers = random.sample(pop, 4)
+  # # for fun
+  # numbers = random.sample(pop, 3)
+  # numbers.append(int(task['id']))
+  # # end of fun
+  examples_list = []
+  for number in numbers:
+    example = next((task for task in subset if task['id'] == number and task['question_number'] == 1), None)
+    if example: 
+        examples_list.append(example)
   
+  example_prompts = []
+  for example in examples_list:
+    example_prompt = user_prompts['few_shot']['scratch'].format(
+      code=example['base_shape_code'],
+      variables=example['variables']
+    )
+    example_prompts.append((example_prompt, example['base_shape']))
+  final_query = user_prompts['scratch']['image_only'] + "\n" + user_prompt_final_piece.format(variables=task['variables'])
+  example_prompts.append((final_query, task['base_shape']))
+  return system_prompt, example_prompts, task['base_shape'], None
+
 
 def eval(model_name='gpt4-v', task_type='scratch', task_mode='code_generation', modalities='image_only', 
 prompting_mode='cot', code_framework='turtle', save_responses=False):
@@ -87,9 +117,9 @@ prompting_mode='cot', code_framework='turtle', save_responses=False):
   elif model_name == 'gemini':
     api_key = os.getenv('GOOGLE_API_KEY')
     model = GeminiModel(api_key=api_key)
-  elif model_name == 'cogvlm':
+  elif model_name == 'llava':
     api_key = os.getenv('REPLICATE_API_TOKEN')
-    model = CogVLMModel(api_key=api_key)
+    model = LlavaModel(api_key=api_key)
   time = datetime.datetime.now().strftime("%d-%m_%H:%M")
   run_name = '|'.join([model_name, task_type, task_mode, modalities, 
   prompting_mode, time])
@@ -119,17 +149,21 @@ prompting_mode='cot', code_framework='turtle', save_responses=False):
   prompt_settings = {key: value for key, value in run_settings.items() if key not in ['time', 'model_name']}
 
   for task in subset:
-    system_prompt, user_prompt, image1, image2 = construct_prompts(
-      task=task,
-      **prompt_settings
-    )
+    if prompting_mode == 'few-shot':
+      system_prompt, user_prompt, image1, image2 = construct_prompts_few_shot(task, subset)
+    else:
+      system_prompt, user_prompt, image1, image2 = construct_prompts(
+        task=task,
+        **prompt_settings
+      )
     task_name = str(task['id']) + '_' + str(task['question_number'])
     if model_name == 'gemini':
-      text_input = system_prompt + '\n' * 3 + user_prompt
-      response = model.get_response(text_input=text_input, base_image=image1, result_image=image2)
+      response = model.get_response(system_message=system_prompt, user_prompt=user_prompt, base_image=image1, \
+        result_image=image2, few_shot=prompting_mode=='few-shot')
     elif model_name=='gpt4-v':
-      response = model.get_response(system_message=system_prompt, user_message=user_prompt, base_image=image1, result_image=image2)
-    elif model_name=='cogvlm':
+      response = model.get_response(system_message=system_prompt, user_message=user_prompt, \
+          base_image=image1, result_image=image2 , few_shot=prompting_mode=='few-shot')
+    elif model_name=='llava':
       text_input = system_prompt + '\n' * 3 + user_prompt
       response = model.get_response(text_input=text_input, base_image=image1)
     try:
@@ -164,7 +198,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run evaluation on different models and tasks.")
     
     parser.add_argument('--model_name', type=str, default='gemini', 
-          help='The model name to use. Options are "gpt4-v" and "gemini". Default is "gemini".')
+          help='The model name to use. Options are "gpt4-v", "gemini", and "llava". Default is "gemini".')
     parser.add_argument('--task_type', type=str, default='scratch', 
           help='Type of task to perform. Options are "scratch" or "tweak". Default is "scratch".')
     parser.add_argument('--task_mode', type=str, default='code_generation', 
