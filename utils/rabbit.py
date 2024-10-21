@@ -1,7 +1,7 @@
 import turtle
 import math
 
-class Sina(turtle.Turtle):
+class Rabbit(turtle.Turtle):
     def __init__(self):
         super().__init__()
         self.setheading(90)
