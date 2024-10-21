@@ -4,8 +4,8 @@
 ![Static Badge](https://img.shields.io/badge/Task-Visual_Reasoning-red)
 ![Static Badge](https://img.shields.io/badge/Benchmark-TurtleBench-blue)
 
-![Static Badge](https://img.shields.io/badge/Model-GPT4--V-green)
-![Static Badge](https://img.shields.io/badge/Model-Gemini_1.0_pro-green)
+![Static Badge](https://img.shields.io/badge/Model-GPT4--o-green)
+![Static Badge](https://img.shields.io/badge/Model-Gemini_1.5_flash-green)
 
 Code for the paper [TurtleBench: A Visual Programming Benchmark in Turtle Geometry]()
 
