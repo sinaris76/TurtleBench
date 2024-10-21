@@ -18,7 +18,6 @@ class LlavaModel:
     self.patience = patience
     self.sleep_time = sleep_time
     self.api_key = api_key
-    # self.model = genai.GenerativeModel('gemini-pro-vision')
   
   def get_response(self, text_input, base_image):
     patience = self.patience
@@ -50,6 +49,3 @@ class LlavaModel:
             time.sleep(self.sleep_time)
     return ""
 
-
-# m = CogVLMModel(api_key="r8_bqEJg2VbuRje7gIYYImpPhqTod2rwRI2DAKj7")
-# print(m.get_response("write a code in python turtle that creates a pentagon", None))
