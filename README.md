@@ -72,13 +72,6 @@ All tasks are included in `dataset.jsonl` file, which includes all the necessary
 | Llava/basic            | **6.01**  | 0.82      | 0.03          | 1.09    | 0.03    | 0.03        | 69.13          |
 | Llava/CoT              | **6.22**  | 0.98      | 1.02          | 0.92    | 1.09    | 1.02        | 72.34          |
 
-| Task | GPT-4V basic | Gemini basic | GPT-4V CoT | Gemini CoT |
-|------|--------------|--------------|------------|------------|
-| **Scratch Code Generation** | | | | |
-| Image only Input | 26% | 15% | 29% | 17% |
-| Text only Input | 37% | 19% | 38% | 21% |
-| Image and Text Input | 38% | 19% | 40% | 21% |
-
 
 ## Prompting
 All the prompts used for the evaluation are available in the `prompts.py` file. You can try new prompts by adding to the `system_prompt' dictionary in this file.
