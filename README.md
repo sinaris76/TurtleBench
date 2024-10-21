@@ -4,8 +4,8 @@
 ![Static Badge](https://img.shields.io/badge/Task-Visual_Reasoning-red)
 ![Static Badge](https://img.shields.io/badge/Benchmark-TurtleBench-blue)
 
-![Static Badge](https://img.shields.io/badge/Model-GPT4--V-green)
-![Static Badge](https://img.shields.io/badge/Model-Gemini_1.0_pro-green)
+![Static Badge](https://img.shields.io/badge/Model-GPT4--o-green)
+![Static Badge](https://img.shields.io/badge/Model-Gemini_1.5_flash-green)
 
 Code for the paper [TurtleBench: A Visual Programming Benchmark in Turtle Geometry]()
 
@@ -61,7 +61,7 @@ You can add new tasks to the benchmark by adding new folders in the `Tasks` dire
 All tasks are included in `dataset.jsonl` file, which includes all the necessary information for the evaluation. If you add a new task, you need to run the `crawl_tasks.py` file to update the dataset file for the evaluation. 
 
 ## Evaluation Results
-| Task Type / Modalities | Scratch T | Scratch I | Scratch I + T | Tweak CG I + T | Tweak CG I + T | Tweak CG I + I | Runnable |
+| Task Type / Modalities | Scratch T | Scratch I | Scratch I + T | Tweak CG I + T | Tweak CE I + T | Tweak CE I + I | Runnable |
 |------------------------|-----------|-----------|---------------|-------------|----------------|----------------|----------|
 | GPT-4o/basic           | 37.04     | 16.03     | **37.98**     | 17.69   | 18.12   | 12.06       | 99.21          |
 | GPT-4o/CoT             | 38.12     | 19.23     | **40.18**     | 20.00   | 19.61   | 13.84       | 99.85          |
