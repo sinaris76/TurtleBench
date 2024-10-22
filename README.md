@@ -82,7 +82,7 @@ It runs the model on a part of benchmark (based on the `task_type` and `task_mod
 
 ```
 python eval.py 
-  --model_name # default: gemini, options: gemini (1.5 flash), gpt (4o), and llava (13B)
+  --model_name # default: gemini, options: gemini, gpt, and llava
   --task_type  # default: scratch, options: scratch and tweak
   --task_mode  # default: code_generation, options: code_generation and code_edit
   --modalities # default: image_only, options: "image_only", "text_only", "image+text", and "image+image".
