@@ -6,7 +6,7 @@
 
 ![Static Badge](https://img.shields.io/badge/Model-GPT4--o-green)
 ![Static Badge](https://img.shields.io/badge/Model-Gemini_1.5_flash-green)
-![Static Badge](https://img.shields.io/badge/Model-llava_13B_flash-green)
+![Static Badge](https://img.shields.io/badge/Model-llava_13B-green)
 
 Code for the paper [TurtleBench: A Visual Programming Benchmark in Turtle Geometry]()
 
